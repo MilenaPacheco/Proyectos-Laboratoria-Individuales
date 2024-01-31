@@ -184,14 +184,29 @@ deben ir agregando más archivos conforme vayan avanzando en su proyecto.
 La siguiente es una estructura de archivos que recomendamos:
 
 ```text
-.
 ├── src
-|  ├── components 
+|  ├── components
+                 - renderAllCards
+                 - renderStatistics
+                 - renderDescriptionCard
+                 - apiKey
+                 - chat
+                 - footer
+                 - header
+                 - btnRegresar
+                 - btnHome ( nombre MovieDev)
 |  ├── data
 |  |  └── dataset.js
 |  ├── lib
 |  |  └── dataFunctions.js
+|  |   -  apyKeyFunction.js
 |  ├── views
+                - home (incluye filter, sort,...?)
+                - description
+                - apiKey
+                - individualChat
+                - allChat
+                - error 
 |  ├── index.html
 |  ├── index.js
 |  ├── router.js
@@ -202,6 +217,7 @@ La siguiente es una estructura de archivos que recomendamos:
 ├── README.md
 └── package.json
 
+*PROPUESTA OCDR
 ```
 
 ### `src/components`
@@ -292,9 +308,26 @@ En la medida de lo posible, termina una Historia de Usuaria antes de pasar
 a la siguiente (cumpliendo con la Definición de Terminado y los Criterios
 de Aceptación).
 
+#### Hu 1
+**Yo como desarrolladora web quiero** ver información más detallada y específica de cada uno de los films. **Para** saber más detalles interesantes y no quedarme con información básica.
+
+##### Criterios de aceptación:
+- Botón claramente visible en la tarjeta de cada película que permita acceder a su información detallada, intuitivamente
+- Al hacer click en el botón, la página debe cambiar y mostrar información más amplia y detallada sobre la película seleccionada
+- La información ampliada debe incluir detalles interesantes sobre la película, que no se mostraron en la tarjeta de inicio
+- La navegación de regreso desde la vista detallada a la vista principal debe ser intuitiva y fácil de usar
+- La funcionalidad de visualización de información detallada debe poder verse de manera consistente en dispositivos móviles y de escritorio.
+##### Definición de terminado:
+- Al darle click al botón, la información más detallada se despliega en una nueva vista con su propia URL
+- El código asociado con la implementación de la vista detallada debe estar libre de errores. Debe superar sus propios tests
+- La interfaz de usuario para la vista detallada debe ser estéticamente agradable y coherente con el diseño general de la página web. Respeta las buenas prácticas de UX design
+- Debe ser responsive. Y realizar pruebas para garantizar que la funcionalidad de información detallada funcione correctamente en diversos navegadores y dispositivos.
+
 ### Diseño de la Interfaz de Usuaria
 
 #### Prototipo de baja fidelidad
+
+[Prototipado en Figma]([https://www.figma.com/](https://www.figma.com/file/6BDUns99NmJqwwlsWQ3NEA/Untitled?type=design&node-id=0-1&mode=design&t=sW4geSWYvtIiM4x1-0))
 
 Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
 solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
