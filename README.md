@@ -186,27 +186,24 @@ La siguiente es una estructura de archivos que recomendamos:
 ```text
 ├── src
 |  ├── components
-                 - renderAllCards
-                 - renderStatistics
-                 - renderDescriptionCard
-                 - apiKey
-                 - chat
-                 - footer
-                 - header
-                 - btnRegresar
-                 - btnHome ( nombre MovieDev)
+                   header 
+                   footer 
+                   chatsTemplate 
+                   allCards
+                   btnSalirdelChat
+                   btnRegresar
+                   rootEncapsulado
 |  ├── data
 |  |  └── dataset.js
 |  ├── lib
 |  |  └── dataFunctions.js
 |  |   -  apyKeyFunction.js
 |  ├── views
-                - home (incluye filter, sort,...?)
-                - description
-                - apiKey
-                - individualChat
-                - allChat
-                - error 
+                   - viewAllCards (home actual)(contiene los filtros) ya existe en dataverse
+                   - viewDescriptionCard (nuestra HU1)
+                   - viewError 
+                   - viewAPIKey / con bienvenida
+                   - viewChats (individual+grupal)
 |  ├── index.html
 |  ├── index.js
 |  ├── router.js
@@ -217,7 +214,6 @@ La siguiente es una estructura de archivos que recomendamos:
 ├── README.md
 └── package.json
 
-*PROPUESTA OCDR
 ```
 
 ### `src/components`

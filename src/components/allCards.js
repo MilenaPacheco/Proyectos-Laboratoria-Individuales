@@ -1,0 +1,1 @@
+// allCards (contiene los filtros) (ya existe en dataverse)
