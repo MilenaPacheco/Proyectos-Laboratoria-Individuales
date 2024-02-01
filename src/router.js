@@ -37,13 +37,13 @@ export const setRootElement = (newRootElementValue) => {
   const renderView = (pathname, props = {}) => {
     // clear the root element - vaciar todo nuestro elemento ROUTES, para que el contenido que se agregue no sea sumado a un contenido anterior
     const root = rootElement;
-    root.innerHTML = "";
+    root.innerHTML = ""; //ERROR en consola - asegúrate de que rootElement sea un objeto del DOM antes de intentar manipular su contenido con innerHTML
     // find the correct view in ROUTES for the pathname - match entre ROUTES y el pathname
     if (ROUTES[pathname]){
-        const template = ROUTES[pathname](props);
+        const template = ROUTES[pathname]();
         root.appendChild(template);
     } else {
-        root.appendChild(ROUTES["/error"](props));
+        root.appendChild(ROUTES["/error"]());
     }
     // in case not found render the error view - si no existe una ruta cargada al pathname lanzar error
     // render the correct view passing the value of props
@@ -58,11 +58,12 @@ export const setRootElement = (newRootElementValue) => {
     // render the view with the pathname and props
     renderView(pathname, props);
   }
+  //navigateTo("/about");
   
   // es un método que tiene sentido sobre todo si la URL es compleja
-  export const onURLChange = (location) => {
+  export const onURLChange = (pathname) => {
     // parse the location for the pathname and search params
     // convert the search params to an object
     // render the view with the pathname and object
-    renderView(location);
+    renderView(pathname);
   }

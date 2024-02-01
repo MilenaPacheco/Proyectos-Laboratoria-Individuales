@@ -3,12 +3,13 @@
 
 import {Example} from './views/Example.js';
 import { setRoutes, setRootElement, onURLChange } from './router.js';
+import { viewError } from './views/viewError.js';
 const routes = {
     "/": Example,
-    "/error": Example,
+    "/error": viewError,
 }
 
-const viewContainer = document.getAnimations("root");
+const viewContainer = document.getElementById("root");
 
 // setRoutes toma a routes y lo lleva a routes.js y lo define dentro de routes.js como si fuera let ROUTES
 setRoutes(routes);
