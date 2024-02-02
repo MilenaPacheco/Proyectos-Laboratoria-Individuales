@@ -40,9 +40,11 @@ export const setRootElement = (newRootElementValue) => {
     root.innerHTML = ""; //ERROR en consola - asegúrate de que rootElement sea un objeto del DOM antes de intentar manipular su contenido con innerHTML
     // find the correct view in ROUTES for the pathname - match entre ROUTES y el pathname
     if (ROUTES[pathname]){
-        const template = ROUTES[pathname]();
-        root.appendChild(template);
+      const template = ROUTES[pathname]();
+      console.log(template);
+      root.appendChild(template);
     } else {
+      console.log(ROUTES["/error"]());
         root.appendChild(ROUTES["/error"]());
     }
     // in case not found render the error view - si no existe una ruta cargada al pathname lanzar error
