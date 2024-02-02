@@ -5,3 +5,8 @@
 .error-box {
     background-color: gray;
 }
+
+header {
+    background-color: palevioletred;
+    color:blue;
+}

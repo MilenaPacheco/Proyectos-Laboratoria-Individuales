@@ -5,8 +5,11 @@ import {Example} from './views/Example.js';
 import { setRoutes, setRootElement, onURLChange } from './router.js';
 import { viewError } from './views/viewError.js';
 const routes = {
-    "/": Example,
+    "/": Example, //viewAllCards
     "/error": viewError,
+    //"/api": viewAPIKey,
+    //"/chats": viewChats,
+    //"/description": viewDescriptionCard,
 }
 
 const viewContainer = document.getElementById("root");
@@ -21,7 +24,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     onURLChange(event.target.location.pathname);
   });
   
-
+window.onpopstate = onURLChange;
 /*
 TODO:
 1.- Definir rutas en router.
