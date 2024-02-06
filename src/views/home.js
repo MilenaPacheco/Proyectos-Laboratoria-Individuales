@@ -9,12 +9,10 @@ export const home = () => {
     const viewHeader = headerComponent();
     
     return viewHeader;
-    
 };
 
 export const renderItems = () => {
     const root = document.createElement("div");
-
     function movies(){
       let filmsHTML = '';
       data.forEach(function (film) { 
