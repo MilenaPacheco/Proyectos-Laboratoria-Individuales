@@ -3,10 +3,19 @@
 }
 
 .error-box {
-    background-color: gray;
+    background-color: #f2f3f2;
+    margin: 0 auto;
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
 }
 
 header {
-    background-color: palevioletred;
-    color:blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #FCAB10;
+    color: #1F0441;
 }
