@@ -1,11 +1,11 @@
 // Este es el archivo que se conecta directamente con el html, desde acá se orquesta
 // En este archivo definirás tus rutas e importarás los componentes que vas a renderizar.
 
-import {Example} from './views/Example.js';
+import {home} from './views/home.js';
 import { setRoutes, setRootElement, onURLChange } from './router.js';
 import { viewError } from './views/viewError.js';
 const routes = {
-    "/": Example, //viewAllCards
+    "/": home, //Home donde se ven todas las tarjetas
     "/error": viewError,
     //"/api": viewAPIKey,
     //"/chats": viewChats,

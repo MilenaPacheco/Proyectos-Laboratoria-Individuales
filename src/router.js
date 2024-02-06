@@ -68,4 +68,4 @@ export const setRootElement = (newRootElementValue) => {
     // convert the search params to an object
     // render the view with the pathname and object
     renderView(pathname);
-  }
+  } 
