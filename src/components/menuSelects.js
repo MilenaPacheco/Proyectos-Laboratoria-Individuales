@@ -64,3 +64,4 @@ selectElement.addEventListener("change", function () {
     return { selectedValue, selectedText };
 });
 
+//comentario: terminar hoy 6
