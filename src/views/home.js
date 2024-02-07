@@ -4,7 +4,6 @@ import { footerComponent } from "./../components/footer.js";
 //import { sortData, filterData, computeStats, computeStatsScore } from "./../lib/dataFunctions.js";
 
 export const home = () => {
-
   const root = document.createElement("div");
 
   const viewHeader = headerComponent();

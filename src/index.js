@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   console.log(event.target.location.pathname);
   onURLChange(event.target.location.pathname);
 });
-
 window.onpopstate = onURLChange;
 /*
 TODO:
