@@ -33,6 +33,10 @@ select {
 }
 
 .title {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Espacio entre los botones */
+    align-items: center;
     padding-top: 15px;
     width: 100vw;
     height: 65px;
@@ -42,6 +46,20 @@ select {
     font-family: 'Titan One', sans-serif;
     font-size: 15px;
 }
+
+.btn-home{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    color: #1F0441; 
+    font-weight: bold; 
+    text-decoration: underline; 
+    font-size: 15px;
+    font-family: 'Titan One', sans-serif;
+    text-decoration: none;
+  }
 
 .inputs {
     position: absolute;
@@ -160,6 +178,7 @@ h4{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
+
 
 @media (max-width: 600px) {
     * {

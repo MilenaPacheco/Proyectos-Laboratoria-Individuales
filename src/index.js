@@ -5,11 +5,11 @@ import {home} from './views/home.js';
 import { setRoutes, setRootElement, onURLChange } from './router.js';
 import { viewError } from './views/viewError.js';
 const routes = {
-    "/": home, //Home donde se ven todas las tarjetas
-    "/error": viewError,
-    //"/api": viewAPIKey,
-    //"/chats": viewChats,
-    //"/description": viewDescriptionCard,
+  "/": home, //Home donde se ven todas las tarjetas
+  "/error": viewError,
+  //"/api": viewAPIKey,
+  //"/chats": viewChats,
+  //"/description": viewDescriptionCard,
 }
 
 const viewContainer = document.getElementById("root");
@@ -19,10 +19,10 @@ setRoutes(routes);
 setRootElement(viewContainer);
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    console.log("DOM fully loaded and parsed");
-    console.log(event.target.location.pathname);
-    onURLChange(event.target.location.pathname);
-  });
+  console.log("DOM fully loaded and parsed");
+  console.log(event.target.location.pathname);
+  onURLChange(event.target.location.pathname);
+});
   
 window.onpopstate = onURLChange;
 /*
