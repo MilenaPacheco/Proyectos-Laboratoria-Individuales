@@ -18,6 +18,8 @@ header {
     cursor: pointer;
     color: #1F0441;
     font-family: 'Titan One', sans-serif;
+    margin-right: auto;
+    margin-left: 0px;
 }
 
 select {
@@ -34,6 +36,10 @@ select {
 
 .title {
     padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 65px;
     color: #1F0441;
@@ -41,6 +47,14 @@ select {
     text-align: center;
     font-family: 'Titan One', sans-serif;
     font-size: 15px;
+    padding: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
 }
 
 .inputs {
@@ -105,9 +119,25 @@ ul {
 }
 
 #btn {
-    margin: 30px 10px 10px 10px;
+    margin: 10px 10px 10px auto; 
     border-radius: 5px; 
-    background-color: transparent;
+    background-color: #F9CE07;
+    color: #1F0441;
+    font-family: 'Titan One', sans-serif;
+    border-color: #1F0441;
+    padding: 2px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.btn-home {
+    cursor: pointer;
+}
+
+.btn-chat-grupal, .btn-api { 
+    margin-right: 40px;
+    border-radius: 5px; 
+    background-color: #F9CE07;
     color: #1F0441;
     font-family: 'Titan One', sans-serif;
     border-color: #1F0441;

@@ -1,7 +1,7 @@
 export const selectsComponent = () => {
-    const selects = document.createElement("div");
-    selects.id = "inputs";
-    selects.innerHTML = `
+  const selects = document.createElement("div");
+  selects.id = "inputs";
+  selects.innerHTML = `
             <label for="genre"><strong>Filtrar por género</strong></label>
             <select name="genre" id="genre" data-testid="select-filter">
                 <option value="a" selected disabled>Selecciona filtro</option>
@@ -44,22 +44,30 @@ export const selectsComponent = () => {
 
         `;
 
-    return selects;
+  return selects;
 };
 
 
-const selectElement = document.getElementById("genre");
+function findSelects(select) {
+  const selectedIndex = select.selectedIndex;
+  const selectedValue = select.options[selectedIndex].value;
+  const selectedText = select.options[selectedIndex].text;
 
-let selectedValue;
-let selectedText;
+  return { selectedValue, selectedText };
+}
 
-selectElement.addEventListener("change", function () {
+const selectGenre = document.querySelector("#genre");
+let selectedGenre = findSelects(selectGenre);
 
-    const options = selectElement.options;
-    const selectedIndex = selectElement.selectedIndex;
+const selectAlfa = document.querySelector("#alfa");
+let selectedAlfa = findSelects(selectAlfa);
 
-    selectedValue = options[selectedIndex].value;
-    selectedText = options[selectedIndex].text;
+const selectYear = document.querySelector("#year");
+let selectedYear = findSelects(selectYear);
 
-    return { selectedValue, selectedText };
-});
+const selectStatistics = document.querySelector("#statistics");
+let selectedStatistics = findSelects(selectStatistics);
+
+const selectStatisticsCountry = document.querySelector("#statistics-country");
+let selectedStatisticsCountry = findSelects(selectStatisticsCountry);
+

@@ -1,4 +1,4 @@
-const data = [
+export const data = [
     {
       "id": "hackers",
       "name": "Hackers",
@@ -458,6 +458,4 @@ const data = [
   
   ];
   
-  //console.log("Estoy mostrando la data", data);
-  export default data;
   
