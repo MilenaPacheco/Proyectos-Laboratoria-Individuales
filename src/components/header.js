@@ -5,8 +5,8 @@ import { navigateTo } from "./../router.js"
 // - btnRegresar (nombre MovieDev en header, te devuelve al inicio)
 
 export const headerComponent = () => {
-	const header = document.createElement("header");
-	header.innerHTML = `
+  const header = document.createElement("header");
+  header.innerHTML = `
     <div class="title">
     <h1 class="btn-home"> MovieDev</h1>
     <div class="button-container">
@@ -23,19 +23,19 @@ export const headerComponent = () => {
     </div>
 `;
 
-	document.body.appendChild(header);
+  document.body.appendChild(header);
 
-	const btnRegresar = document.querySelector(".btn-home");
-	btnRegresar.addEventListener("click", () => {
-		navigateTo(`/`)
-	});
-	const btnAPIkey = document.querySelector(".btn-api");
-	btnAPIkey.addEventListener("click", () => {
-		navigateTo(`/viewAPIKey`);
-	});
-	const btnChatgrupal = document.querySelector(".btn-chat-grupal");
-	btnChatgrupal.addEventListener("click", () => {
-		navigateTo(`/viewsChats`);
-	});
-	return header;
+  const btnRegresar = document.querySelector(".btn-home");
+  btnRegresar.addEventListener("click", () => {
+    navigateTo(`/`)
+  });
+  const btnAPIkey = document.querySelector(".btn-api");
+  btnAPIkey.addEventListener("click", () => {
+    navigateTo(`/viewAPIKey`);
+  });
+  const btnChatgrupal = document.querySelector(".btn-chat-grupal");
+  btnChatgrupal.addEventListener("click", () => {
+    navigateTo(`/viewsChats`);
+  });
+  return header;
 };
