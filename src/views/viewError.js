@@ -1,22 +1,19 @@
 export const viewError = () => {
   const errorBox = document.createElement("div");
   errorBox.className = "error-box";
+
   const imgError = document.createElement("img");
   imgError.className = "error-image";
-  imgError.src = "https://raw.githubusercontent.com/MilenaPacheco/DEV013-dataverse/main/src/img/the-imitation-game.jpeg";
+  imgError.src = "https://cdn-icons-png.flaticon.com/512/755/755014.png";
   imgError.alt = "Error 404"
+
   errorBox.appendChild(imgError);
+
   const messageError = document.createElement("p");
   messageError.className="error-message"
-  messageError.textContent= "ruta no encontrada";
+  messageError.innerHTML= "<strong>¡Error! Sitio no encontrado</strong>";
+
   errorBox.appendChild(messageError);
-  //errorBox.textContent = "ruta no encontrada";
+
   return errorBox;
 };
-
-/*export const viewError = () => {
-	const errorBox = document.createElement("div")
-	errorBox.className = "error-box";
-	errorBox.innerHTML = "ruta no encontrada";
-	return errorBox;
-}*/

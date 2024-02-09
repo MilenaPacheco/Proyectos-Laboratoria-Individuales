@@ -6,20 +6,29 @@
   padding: 0;
 }
 
-.error-message {
-  color: #F9CE07;
-  background-color: #0CE3E8;
-  margin-top: 10px;
+header {
+  margin: 0;
 }
 
 .error-image {
-  width: 100px;
-  height: 100px;
+  height: 140px;
 }
 
-header {
-  margin: 0;
-
+.error-box {
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: #c1c1c1;
+  border-radius: 15px;
+  width: 350px;
+  height: 200px;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  color: #1F0441;
 }
 
 .open-menu {
@@ -317,14 +326,6 @@ h4 {
 
 }
 
-.error-box {
-  background-color: #f2f3f2;
-  margin: 25vw auto;
-  border-radius: 5px;
-  width: 600px;
-  height: 500px;
-  text-align: center;
-}
 
 /** {
     margin: o;
