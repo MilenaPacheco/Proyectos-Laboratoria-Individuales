@@ -1,3 +1,5 @@
+import { navigateTo } from "./../router.js"
+
 export const viewError = () => {
   const errorBox = document.createElement("div");
   errorBox.className = "error-box";
@@ -14,6 +16,16 @@ export const viewError = () => {
   messageError.innerHTML= "<strong>¡Error! Sitio no encontrado</strong>";
 
   errorBox.appendChild(messageError);
+  
+  const acceptButton = document.createElement("button");
+  acceptButton.textContent = "Aceptar";
+  acceptButton.className = "btn-accept"
+  acceptButton.addEventListener("click", () => {
+    navigateTo(`/`)
+
+});
+
+  errorBox.appendChild(acceptButton);
 
   return errorBox;
 };
