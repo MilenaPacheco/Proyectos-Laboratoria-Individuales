@@ -24,9 +24,8 @@ export const setRoutes = (newRoutesValue) => {
   // assign ROUTES
   if (typeof newRoutesValue === "object") {
     if (newRoutesValue["/error"]) {
-
+      ROUTES = newRoutesValue;
     }
-    ROUTES = newRoutesValue;
   }
 }
 
