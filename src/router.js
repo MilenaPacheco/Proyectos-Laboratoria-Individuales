@@ -9,13 +9,14 @@ let ROUTES = {
 // referencia a nuestro elemento en html donde vamos a dibujar el contenido de nuestros componentes
 let rootElement = "";
 
+
 // se llaman set por que nos permiten setear un valor a nuestras variables
 // verifican que los valores sean correctos para que ROUTES y rootElement trabajen
 export const setRootElement = (newRootElementValue) => {
   // assign rootEl
   // validar si newRootElementValue es un objeto html
   rootElement = newRootElementValue;
-};
+}
 
 export const setRoutes = (newRoutesValue) => {
   // optional Throw errors if routes isn't an object
@@ -23,10 +24,11 @@ export const setRoutes = (newRoutesValue) => {
   // assign ROUTES
   if (typeof newRoutesValue === "object") {
     if (newRoutesValue["/error"]) {
+
     }
     ROUTES = newRoutesValue;
   }
-};
+}
 
 // no se agregó queryStringToObject porque es opcional para este proyecto
 // en dataverse-chat nos enfocaremos en pathname, search es interesante pero no obligatorio
@@ -48,7 +50,7 @@ const renderView = (pathname, props = {}) => {
   // in case not found render the error view - si no existe una ruta cargada al pathname lanzar error
   // render the correct view passing the value of props
   // add the view element to the DOM root element
-};
+}
 
 // navigateTo actualiza el historial de nuestro navegador a partir de las URLs que vamos digitando con history.pushState
 export const navigateTo = (pathname, props = {}) => {
@@ -57,7 +59,7 @@ export const navigateTo = (pathname, props = {}) => {
   history.pushState("", "", urlVisited); // el primer parámetro era state
   // render the view with the pathname and props
   renderView(pathname, props);
-};
+}
 //navigateTo("/about");
 
 // es un método que tiene sentido sobre todo si la URL es compleja
@@ -66,4 +68,4 @@ export const onURLChange = (pathname) => {
   // convert the search params to an object
   // render the view with the pathname and object
   renderView(pathname);
-};
+} 

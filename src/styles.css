@@ -1,368 +1,319 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Titan+One&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+	margin: 0;
+	padding: 0;
 }
 
 header {
-    margin: 0;
-}
+	margin: 0;
 
-.error-message{
-    color: #F9CE07;
-    background-color: #0CE3E8;
-    margin-top: 10px;
-}
-
-.error-image{
-    width: 100px;
-    height: 100px;
 }
 
 .open-menu {
-    display: block;
-    border: 0;
-    font-size: 1.2rem;
-    background-color: transparent;
-    cursor: pointer;
-    color: #1F0441;
-    font-family: 'Titan One', sans-serif;
-    margin-right: auto;
-    margin-left: 0px;
+	display: block;
+	border: 0;
+	font-size: 1.2rem;
+	background-color: transparent;
+	cursor: pointer;
+	color: #1F0441;
+	font-family: 'Titan One', sans-serif;
+	margin-right: auto;
+	margin-left: 0px;
 }
 
 select {
-    margin: 0;
-    width: 165px;
-    font-family: 'Courier New', Courier, monospace;
-    border-radius: 5px;
-    font-size: 14px;
-    color: white;
-    cursor: pointer;
-    background-color: #1F0441;
-    text-align: center;
+	margin: 0;
+	width: 165px;
+	font-family: 'Courier New', Courier, monospace;
+	border-radius: 5px;
+	font-size: 14px;
+	color: white;
+	cursor: pointer;
+	background-color: #1F0441;
+	text-align: center;
 }
 
 .title {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px; /* Espacio entre los botones */
-    align-items: center;
-    padding-top: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 65px;
-    color: #1F0441;
-    background-color: #FCAB10;
-    text-align: center;
-    font-family: 'Titan One', sans-serif;
-    font-size: 15px;
-    padding: 10px;
+	padding-top: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 65px;
+	color: #1F0441;
+	background-color: #FCAB10;
+	text-align: center;
+	font-family: 'Titan One', sans-serif;
+	font-size: 15px;
+	padding: 10px;
 }
 
 .button-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 10px;
 }
 
-.btn-home{
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    color: #1F0441; 
-    font-weight: bold; 
-    text-decoration: underline; 
-    font-size: 15px;
-    font-family: 'Titan One', sans-serif;
-    text-decoration: none;
-  }
-
 .inputs {
-    position: absolute;
-    display: none;
-    flex-direction: column;
-    width: 200px;
-    background-color: #FCAB10;
-    font-family: 'Roboto Mono', monospace;
-    align-items:flex-end;
-    padding: 9px;
-    font-size: 14px;
-    color: #1F0441;
-    border-radius: 0 0 10px 0;
-    gap: 0.5rem;
+	position: absolute;
+	display: none;
+	flex-direction: column;
+	width: 200px;
+	background-color: #FCAB10;
+	font-family: 'Roboto Mono', monospace;
+	align-items: flex-end;
+	padding: 9px;
+	font-size: 14px;
+	color: #1F0441;
+	border-radius: 0 0 10px 0;
+	gap: 0.5rem;
 }
 
 body {
-    flex-grow: 1;
-    background-color: #1F0441;
-    color: #1F0441;
-}
-.div-card img {
-    height: 30vw;
-    
-    border-radius: 10px;
-    width: 37vw;
-    
+	flex-grow: 1;
+	background-color: #1F0441;
+	color: #1F0441;
 }
 
 .cards {
-    width: 290px;
-    padding: 15px;
-    border-radius: 10px;
-    margin: 7px;
-    box-sizing: border-box;
-    background-color: #0CE3E8;
-    text-align: center;
-    font-size: 16px;
-    font-family: 'Roboto Mono', monospace;
+	width: 290px;
+	padding: 15px;
+	border-radius: 10px;
+	margin: 7px;
+	box-sizing: border-box;
+	background-color: #0CE3E8;
+	text-align: center;
+	font-size: 16px;
+	font-family: 'Roboto Mono', monospace;
 }
 
 img {
-    height: 17vw;
-    margin-bottom: 15px;
-    border-radius: 10px;
+	height: 17vw;
+	margin-bottom: 15px;
+	border-radius: 10px;
 }
 
 ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 20px;
 }
 
 .name-movie {
-    font-size: 20px;
-    margin-bottom: 3px;
+	font-size: 20px;
+	margin-bottom: 3px;
 }
 
 .info-movie {
-    margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 .year-movie {
-    font-size: 16px;
-    margin-bottom: 10px;
+	font-size: 16px;
+	margin-bottom: 10px;
 }
 
 #btn {
-    margin: 10px 10px 10px auto; 
-    border-radius: 5px; 
-    background-color: #F9CE07;
-    color: #1F0441;
-    font-family: 'Titan One', sans-serif;
-    border-color: #1F0441;
-    padding: 2px;
-    cursor: pointer;
-    margin-left: auto;
+	margin: 10px 10px 10px auto;
+	border-radius: 5px;
+	background-color: #F9CE07;
+	color: #1F0441;
+	font-family: 'Titan One', sans-serif;
+	border-color: #1F0441;
+	padding: 2px;
+	cursor: pointer;
+	margin-left: auto;
 }
 
 .btn-home {
-    cursor: pointer;
+	cursor: pointer;
 }
 
-.btn-chat-grupal, .btn-api { 
-    margin-right: 40px;
-    border-radius: 5px; 
-    background-color: #F9CE07;
-    color: #1F0441;
-    font-family: 'Titan One', sans-serif;
-    border-color: #1F0441;
-    padding: 2px;
-    cursor: pointer;
+.btn-chat-grupal,
+.btn-api {
+	margin-right: 40px;
+	border-radius: 5px;
+	background-color: #F9CE07;
+	color: #1F0441;
+	font-family: 'Titan One', sans-serif;
+	border-color: #1F0441;
+	padding: 2px;
+	cursor: pointer;
 }
 
 .cards-two {
-    background-color: #0CE3E8;
-    width: 260px;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 16px;
-    font-family: 'Roboto Mono', monospace;
-    margin-top: 120px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 111px;
+	background-color: #0CE3E8;
+	width: 260px;
+	padding: 15px;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 16px;
+	font-family: 'Roboto Mono', monospace;
+	margin-top: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 111px;
 }
 
 .cards-menu {
-    margin-left: 200px;
+	margin-left: 200px;
 }
 
 footer {
-    background-color: #FCAB10;
-    color:#1F0441;
-    width: 100vw;
-    text-align: center;
-    padding: 5px;
-    font-family: 'Titan One', sans-serif;
-    position: relative;
-    bottom:0px;
-    bottom: 0;
-    left:0px;
+	background-color: #FCAB10;
+	color: #1F0441;
+	width: 100vw;
+	text-align: center;
+	padding: 5px;
+	font-family: 'Titan One', sans-serif;
+	position: relative;
+	bottom: 0px;
+	bottom: 0;
+	left: 0px;
 }
 
-h2{
-    margin-top: 15px;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+h2 {
+	margin-top: 15px;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	font-family: 'Courier New', Courier, monospace;
 }
 
-h4{
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+h4 {
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	font-family: 'Courier New', Courier, monospace;
 }
-
 
 @media (max-width: 600px) {
-    * {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
-    
-    header {
-        margin: 0;
-    }
-    .title {
-        padding-top: 7px;
-        width: 100vw;
-        height: 65px;
-        color: #1F0441;
-        background-color: #FCAB10;
-        text-align: center;
-        font-family: 'Titan One', sans-serif;
-        font-size: 10px;
-    }
-    
-    body {
-      background-color: white;
-      color: #1F0441;
-      flex-grow: 1;
-    }
+	* {
+		margin: 0;
+		padding: 0;
+		overflow-x: hidden;
+	}
 
-    .inputs {
-        position: absolute;
-        display: none;
-        flex-direction: column;
-        width: 130px;
-        background-color: #FCAB10;
-        font-family: 'Roboto Mono', monospace;
-        align-items:flex-end;
-        padding: 9px;
-        font-size: 12px;
-        color: #1F0441;
-        border-radius: 0 0 10px 0;
-        gap: 0.3rem;
-    }
+	header {
+		margin: 0;
+	}
 
-    img {
-        height: 14vw;
-        margin-bottom: 10px;
-        border-radius: 7px;
-    }
-    .cards {
-        width: 260px;
-        padding: 10px;
-        border-radius: 7px;
-        margin: 7px;
-        box-sizing: border-box;
-        background-color: #0CE3E8;
-        text-align: center;
-        font-size: 12px;
-        font-family: 'Roboto Mono', monospace;
-        flex-direction: column;
-    }
+	.title {
+		padding-top: 7px;
+		width: 100vw;
+		height: 65px;
+		color: #1F0441;
+		background-color: #FCAB10;
+		text-align: center;
+		font-family: 'Titan One', sans-serif;
+		font-size: 10px;
+	}
 
-    ul {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 20px;
-        align-content: center;
-    }
-    h2{
-        margin-top: 15px;
-        color: #1F0441;
-        font-size: 15px;
-        text-align: center;
-        font-family: 'Courier New', Courier, monospace;
-    }
-    
-    h4{
-        color: #1F0441;
-        font-size: 15px;
-        text-align: center;
-        font-family: 'Courier New', Courier, monospace;
-    }
+	body {
+		background-color: white;
+		color: #1F0441;
+		flex-grow: 1;
+	}
 
-    select {
-        margin: 0;
-        width: 120px;
-        font-family: 'Courier New', Courier, monospace;
-        border-radius: 5px;
-        font-size: 12px;
-        color: #1F0441;
-        cursor: pointer;
-        background-color: white;
-        text-align: center;
-    }
+	.inputs {
+		position: absolute;
+		display: none;
+		flex-direction: column;
+		width: 130px;
+		background-color: #FCAB10;
+		font-family: 'Roboto Mono', monospace;
+		align-items: flex-end;
+		padding: 9px;
+		font-size: 12px;
+		color: #1F0441;
+		border-radius: 0 0 10px 0;
+		gap: 0.3rem;
+	}
 
-    .cards-two {
-        background-color: #0CE3E8;
-        width: 160px;
-        padding: 15px;
-        border-radius: 10px;
-        text-align: center;
-        font-size: 13px;
-        font-family: 'Roboto Mono', monospace;
-        margin-top: 120px;
-        margin-left: 160px;
-        margin-bottom: 111px;
-    }
+	img {
+		height: 14vw;
+		margin-bottom: 10px;
+		border-radius: 7px;
+	}
 
-  }
+	.cards {
+		width: 260px;
+		padding: 10px;
+		border-radius: 7px;
+		margin: 7px;
+		box-sizing: border-box;
+		background-color: #0CE3E8;
+		text-align: center;
+		font-size: 12px;
+		font-family: 'Roboto Mono', monospace;
+		flex-direction: column;
+	}
 
-  .error-box {
-      background-color: #f2f3f2;
-      margin: 25vw auto;
-      border-radius: 5px;
-      width: 600px;
-      height: 500px;
-      text-align: center;
-  }
+	ul {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		padding: 20px;
+		align-content: center;
+	}
 
-  .div-card {
-    display: grid;
-    background-color: #FCAB10;
-    margin: 4vw 13vw;
-    width: 75vw;
-    height: auto;
-    border-radius: 15px;
-    padding: 1em;
-    grid-template-columns: 55% 45%;
-    gap: 1em;
-}
-.div-card > * {
-    width: 100%;
-    height: 100%;
+	h2 {
+		margin-top: 15px;
+		color: #1F0441;
+		font-size: 15px;
+		text-align: center;
+		font-family: 'Courier New', Courier, monospace;
+	}
+
+	h4 {
+		color: #1F0441;
+		font-size: 15px;
+		text-align: center;
+		font-family: 'Courier New', Courier, monospace;
+	}
+
+	select {
+		margin: 0;
+		width: 120px;
+		font-family: 'Courier New', Courier, monospace;
+		border-radius: 5px;
+		font-size: 12px;
+		color: #1F0441;
+		cursor: pointer;
+		background-color: white;
+		text-align: center;
+	}
+
+	.cards-two {
+		background-color: #0CE3E8;
+		width: 160px;
+		padding: 15px;
+		border-radius: 10px;
+		text-align: center;
+		font-size: 13px;
+		font-family: 'Roboto Mono', monospace;
+		margin-top: 120px;
+		margin-left: 160px;
+		margin-bottom: 111px;
+	}
+
 }
 
+.error-box {
+	background-color: #f2f3f2;
+	margin: 0 auto;
+	border-radius: 5px;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+}
 
 /** {
     margin: o;
