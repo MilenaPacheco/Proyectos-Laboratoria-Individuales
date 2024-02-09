@@ -39,30 +39,3 @@ export const renderItems = (data) => {
 
 	return filmsList;
 };
-
-
-/*
-const renderItems = (data) => {
-	// Creamos un elemento ul para contener las películas
-	const filmsList = document.createElement("ul");
-
-	// Iteramos sobre los datos de las películas y creamos un elemento li para cada película
-	data.forEach(function (film) {
-		const filmItem = document.createElement("li");
-		filmItem.classList.add("cards");
-		filmItem.setAttribute("itemscope", "");
-		filmItem.setAttribute("itemtype", "movie");
-		filmItem.innerHTML = `
-			<dl>
-				<img src="${film.imageUrl}" alt="Imagen de la película: ${film.name}" />
-				<dt></dt><dd class="name-movie" itemprop="name"><strong>${film.name}</strong></dd>
-				<dt></dt><dd class="year-movie" itemprop="yearMovie"><strong>(${film.facts.yearMovie})</strong></dd>
-				<dt></dt><dd class= "info-movie" itemprop="shortDescription">${film.shortDescription}</dd>
-				<dt></dt><dd itemprop="genreMovie"><strong>Género: </strong>${film.facts.genreMovie}</dd>
-			</dl>`;
-		filmsList.appendChild(filmItem); 
-	});
-
-	return filmsList; 
-};
-*/
