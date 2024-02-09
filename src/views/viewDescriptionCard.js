@@ -44,13 +44,21 @@ export const viewDescriptionCard = (film) => {
   return root 
 };
 
-function createImg(film){
+/*function createImg(film){
   const filmImage = document.createElement("img");
   const htmlImg = `
     <img class="film-image" src="${film.imageUrl}" alt="Imagen de la película ${film.name}"/>
   `;
   filmImage.innerHTML = htmlImg;
   return filmImage
+}*/
+
+function createImg(film){
+  const filmImage = document.createElement("img");
+  filmImage.className = "film-image";
+  filmImage.src = film.imageUrl;
+  filmImage.alt = `Imagen de la película ${film.name}`;
+  return filmImage;
 }
 
 function descriptionCard(film){
@@ -84,7 +92,7 @@ function descriptionCard2(film){
     <li class="cards" itemscope itemtype="movie">
       <dl>
       <dt></dt><dd class= "description" itemprop="description"><strong>Descripción:  ${film.description}</dd>
-      <dl>
+      </dl>
     </li>
     `;
   descriptionCardHTML.innerHTML = html; 
