@@ -10,6 +10,17 @@ header {
     margin: 0;
 }
 
+.error-message{
+    color: #F9CE07;
+    background-color: #0CE3E8;
+    margin-top: 10px;
+}
+
+.error-image{
+    width: 100px;
+    height: 100px;
+}
+
 .open-menu {
     display: block;
     border: 0;
@@ -35,6 +46,10 @@ select {
 }
 
 .title {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Espacio entre los botones */
+    align-items: center;
     padding-top: 15px;
     display: flex;
     flex-direction: column;
@@ -57,6 +72,20 @@ select {
     margin-top: 10px;
 }
 
+.btn-home{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    color: #1F0441; 
+    font-weight: bold; 
+    text-decoration: underline; 
+    font-size: 15px;
+    font-family: 'Titan One', sans-serif;
+    text-decoration: none;
+  }
+
 .inputs {
     position: absolute;
     display: none;
@@ -76,6 +105,13 @@ body {
     flex-grow: 1;
     background-color: #1F0441;
     color: #1F0441;
+}
+.div-card img {
+    height: 30vw;
+    
+    border-radius: 10px;
+    width: 37vw;
+    
 }
 
 .cards {
@@ -191,6 +227,7 @@ h4{
     font-family: 'Courier New', Courier, monospace;
 }
 
+
 @media (max-width: 600px) {
     * {
         margin: 0;
@@ -303,12 +340,29 @@ h4{
 
   .error-box {
       background-color: #f2f3f2;
-      margin: 0 auto;
+      margin: 25vw auto;
       border-radius: 5px;
-      width: 200px;
-      height: 200px;
+      width: 600px;
+      height: 500px;
       text-align: center;
   }
+
+  .div-card {
+    display: grid;
+    background-color: #FCAB10;
+    margin: 4vw 13vw;
+    width: 75vw;
+    height: auto;
+    border-radius: 15px;
+    padding: 1em;
+    grid-template-columns: 55% 45%;
+    gap: 1em;
+}
+.div-card > * {
+    width: 100%;
+    height: 100%;
+}
+
 
 /** {
     margin: o;
