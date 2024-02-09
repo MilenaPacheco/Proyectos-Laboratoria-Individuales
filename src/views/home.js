@@ -1,29 +1,36 @@
 import { headerComponent } from "./../components/header.js";
 import { data } from "./../data/dataset.js";
 import { footerComponent } from "./../components/footer.js";
+import { navigateTo } from "../router.js";
 //import { sortData, filterData, computeStats, computeStatsScore } from "./../lib/dataFunctions.js";
 
 export const home = () => {
+  const root = document.createElement("div");
 
-	const root = document.createElement("div");
+  const viewHeader = headerComponent();
+  root.appendChild(viewHeader);
 
-	const viewHeader = headerComponent();
-	root.appendChild(viewHeader);
+  const viewCards = renderItems(data);
+  root.appendChild(viewCards);
 
-	const viewCards = renderItems(data);
-	root.appendChild(viewCards)
+  const footer = footerComponent();
+  root.appendChild(footer);
 
-	const footer = footerComponent();
-	root.appendChild(footer);
+  const cards = root.querySelectorAll(".cards");
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      navigateTo(`/description/${card.id}`);
+    });
+  });
 
-	return root;
+  return root;
 };
 
 export const renderItems = (data) => {
-	let html = '';
+  let html = "";
 
-	data.forEach(function (film) {
-		html += `<li class="cards" itemscope itemtype="movie">
+  data.forEach(function (film) {
+    html += `<li class="cards" id="${film.id}" itemscope itemtype="movie">
                 <dl>
                   <img src="${film.imageUrl}" alt=Imagen de la película: ${film.name} />
                   <dt></dt><dd class="name-movie" itemprop="name"><strong>${film.name}</strong></dd>
@@ -32,10 +39,10 @@ export const renderItems = (data) => {
                   <dt></dt><dd itemprop="genreMovie"><strong>Género: </strong>${film.facts.genreMovie}</dd>
                 </dl>
               </li>`;
-	});
+  });
 
-	const filmsList = document.createElement("ul");
-	filmsList.innerHTML = html;
+  const filmsList = document.createElement("ul");
+  filmsList.innerHTML = html;
 
-	return filmsList;
+  return filmsList;
 };
