@@ -1,6 +1,3 @@
-// Este es el archivo que se conecta directamente con el html, desde acá se orquesta
-// En este archivo definirás tus rutas e importarás los componentes que vas a renderizar.
-
 import { home } from './views/home.js';
 import { data } from "./../data/dataset.js";
 import { setRoutes, setRootElement, onURLChange } from './router.js';
@@ -12,8 +9,16 @@ const routes = {
   "/error": viewError,
   //"/api": viewAPIKey,
   //"/chats": viewChats,
-  "/description": () => viewDescriptionCard(data[1])
+  //"/description": () => viewDescriptionCard(data[1])
 }
+
+//Obtener en un array los id de cada uno de los films y a cada uno de estos   `/pelicula/${movie}`;
+
+const pathFilm = data.map((film) => `/description/${film.id}`);
+pathFilm.forEach((path) => {
+  routes[path] = viewDescriptionCard;
+})
+console.log(routes)
 
 const viewContainer = document.getElementById("root");
 
