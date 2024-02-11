@@ -9,11 +9,10 @@ const routes = {
   "/error": viewError,
   //"/api": viewAPIKey,
   //"/chats": viewChats,
-  //"/description": () => viewDescriptionCard(data[1])
+  // "/description": viewDescriptionCard   // /pelicula/${movie}--- "/pelicula/walli": viewDescriptionCard(walli) 
 }
 
-//Obtener en un array los id de cada uno de los films y a cada uno de estos   `/pelicula/${movie}`;
-
+//Obtener en un array los id de cada uno de los films y a cada uno de estos escribirle la ruta `/pelicula/${movie}`, esto me dvolverá un array con las rutas.
 const pathFilm = data.map((film) => `/description/${film.id}`);
 pathFilm.forEach((path) => {
   routes[path] = viewDescriptionCard;
