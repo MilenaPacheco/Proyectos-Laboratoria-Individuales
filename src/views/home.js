@@ -19,7 +19,8 @@ export const home = () => {
   const cards = root.querySelectorAll(".cards");
   cards.forEach((card) => {
     card.addEventListener("click", () => {
-      navigateTo(`/description/${card.id}`);
+      const cardId = card.getAttribute("id");
+      navigateTo(`/description/${card.id}`, cardId);
     });
   });
 
