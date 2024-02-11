@@ -1,10 +1,16 @@
 import { headerComponent } from "./../components/header.js";
-//import { data } from "./../data/dataset.js";
+import { data } from "./../data/dataset.js";
 import { footerComponent } from "./../components/footer.js";
 import { btnRegresar } from "../components/btnRegresar.js";
 import { btnChat } from "../components/btnChat.js";
 import { navigateTo } from "./../router.js";
-export const viewDescriptionCard = (film) => {
+//cardId es un parámetro que se envía desde el home en el escuchador de click de las tarjetitas, este corresponde al id de la tarjeta clickeada 
+export const viewDescriptionCard = (cardId) => {
+  console.log("card id: "+ cardId)
+
+  //se extrae del array de objetos, data, el elemento que coincida se pasará a las fumciones de renderizado 
+  const cardActual = data.find((card) => card.id === cardId); 
+  console.log("card array: ", cardActual);
   const root = document.createElement("div");
 
   const viewHeader = headerComponent();
@@ -14,13 +20,13 @@ export const viewDescriptionCard = (film) => {
   divCard.className = "div-card";
   root.appendChild(divCard)
 
-  const imageFilm = createImg(film);
+  const imageFilm = createImg(cardActual);
   divCard.appendChild(imageFilm);
 
-  const descriptionCardShort = descriptionCard(film);
+  const descriptionCardShort = descriptionCard(cardActual);
   divCard.appendChild(descriptionCardShort);
 
-  const descriptionCardAll = descriptionCard2(film);
+  const descriptionCardAll = descriptionCard2(cardActual);
   divCard.appendChild(descriptionCardAll);
 
   const botonRegresar = btnRegresar();
@@ -44,16 +50,8 @@ export const viewDescriptionCard = (film) => {
   return root 
 };
 
-/*function createImg(film){
-  const filmImage = document.createElement("img");
-  const htmlImg = `
-    <img class="film-image" src="${film.imageUrl}" alt="Imagen de la película ${film.name}"/>
-  `;
-  filmImage.innerHTML = htmlImg;
-  return filmImage
-}*/
-
 function createImg(film){
+  //console.log(film)
   const filmImage = document.createElement("img");
   filmImage.className = "film-image";
   filmImage.src = film.imageUrl;
@@ -63,6 +61,7 @@ function createImg(film){
 
 function descriptionCard(film){
   const descriptionCardHTML = document.createElement("ul");
+  descriptionCardHTML.className = "list-description-short"
   const html = ` 
         <li class="card-description-short" itemscope itemtype="movie">
         <dl>
@@ -79,6 +78,7 @@ function descriptionCard(film){
 
 function descriptionCard2(film){
   const descriptionCardHTML = document.createElement("ul");
+  descriptionCardHTML.className = "list-description-all"
   const html = `<li class="card-description-all" itemscope itemtype="movie">
       <dl>
         <dt></dt><dd class="year-movie" itemprop="yearMovie"><strong>Año de lanzamiento: (${film.facts.yearMovie})</strong></dd>
