@@ -20,7 +20,7 @@ export const viewAPIKey = () =>{
   root.appendChild(input);
 
   const btnConfirmar = document.createElement("button");
-  btnConfirmar.className = "btn-confirmar";
+  btnConfirmar.className = "btn btn-confirmar";
   btnConfirmar.textContent = "Confirmar"; // Agregar texto al botón
   root.appendChild(btnConfirmar);
   btnConfirmar.addEventListener("click", () => {
