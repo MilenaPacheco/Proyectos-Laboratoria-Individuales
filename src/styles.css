@@ -386,7 +386,7 @@ header {
     padding-bottom: 5vw;
 }
 
-.btn-regresar, .btn-chat, .btn-confirmar{
+.btn{
     font-family: "Modak", system-ui;
     width: 16vw;
     height: 4vw;
@@ -451,4 +451,41 @@ header {
 .ingreso .btn-regresar-bienvenida {
     top: 28vh;
     left: 42vw;
+}
+
+/**Estilos viewChat**/
+.btn-icon-enviar {
+    background-image: url(img/icons8-enviar-24.png);
+    position: relative;
+    width: 39px;
+    height: 20px;
+    left: 25vw;
+}
+.contenedor-chat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fcab10;
+    width: 91vw;
+    height: 72vh;
+    border-radius: 2vh;
+    margin: 5vh 5vw 8vh 5vw;
+    padding-top: 4vh;
+}
+.input-chat {
+    height: 4vh;
+    width: 49vw;
+    background-color: #d9d9d9;
+    border-radius: 11px;
+    margin-top: 1vh;
+    margin-left: -15vw;
+}
+.chat-image{
+    width: 32vw;
+    height: auto;
+}
+.btn-salir-chat {
+    width: 21vw;
+    left: 40vw;
+    top: -6vh;
 }
