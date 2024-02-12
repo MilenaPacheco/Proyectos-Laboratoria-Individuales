@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modak&family=Moulpali&display=swap');
 
 * {
   margin: 0;
@@ -425,4 +426,29 @@ header {
     left: 30vw;
     width: 39vw;
     height: 4vh;
+}
+
+/**Estilos viewBienvenida**/
+.bienvenida {
+    position: relative;
+    font-family: 'Modak';
+    text-align: center;
+    color: #fcab10;
+    font-size: 57px;
+    font-weight: 100;
+    top: 15vh;
+}
+.validacion {
+    margin-top: 14vh;
+    margin-bottom: 26vh;
+    position: absolute;
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+    font-family: "Moulpali", sans-serif;
+    left: 32vw;
+}
+.ingreso .btn-regresar-bienvenida {
+    top: 28vh;
+    left: 42vw;
 }
