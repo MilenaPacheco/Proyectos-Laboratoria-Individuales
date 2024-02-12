@@ -44,7 +44,8 @@ export const viewDescriptionCard = (cardId) => {
   });
   //const btnChatgrupal = document.querySelector(".btn-chat-grupal");
   botonChat.addEventListener("click", () => {
-    navigateTo(`/viewChats`);
+    //const filmId = card 
+    navigateTo(`/chats`, cardActual);
   });
   //console.log(root)
   return root 
