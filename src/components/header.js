@@ -29,10 +29,12 @@ export const headerComponent = () => {
   btnRegresar.addEventListener("click", () => {
     navigateTo(`/`)
   });
+  
   const btnAPIkey = document.querySelector(".btn-api");
   btnAPIkey.addEventListener("click", () => {
     navigateTo(`/viewAPIKey`);
   });
+
   const btnChatgrupal = document.querySelector(".btn-chat-grupal");
   btnChatgrupal.addEventListener("click", () => {
     navigateTo(`/viewsChats`);
