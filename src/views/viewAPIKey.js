@@ -25,7 +25,7 @@ export const viewAPIKey = () =>{
   root.appendChild(btnConfirmar);
   btnConfirmar.addEventListener("click", () => {
     // Validar API. Si es correcta, dirigir a la vista de bienvenida. Sino, mostrar elemento con API errónea
-    navigateTo(`/`);
+    navigateTo(`/confirmar`);
   });
   
 
