@@ -1,5 +1,6 @@
 import { home } from './views/home.js';
 import { viewAPIKey } from './views/viewAPIKey.js';
+import { viewBienvenida } from './views/viewBienvenida.js';
 import { data } from "./../data/dataset.js";
 import { setRoutes, setRootElement, onURLChange } from './router.js';
 import { viewError } from './views/viewError.js';
@@ -11,6 +12,7 @@ const routes = {
   "/viewAPIKey": viewAPIKey,
   //"/chats": viewChats,
   // "/description": viewDescriptionCard   // /pelicula/${movie}--- "/pelicula/walli": viewDescriptionCard(walli) 
+  "/confirmar": viewBienvenida,
 }
 
 //Obtener en un array los id de cada uno de los films y a cada uno de estos escribirle la ruta `/pelicula/${movie}`, esto me dvolverá un array con las rutas.
