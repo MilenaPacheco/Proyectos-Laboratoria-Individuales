@@ -1,4 +1,5 @@
 import { home } from './views/home.js';
+import { viewAPIKey } from './views/viewAPIKey.js';
 import { data } from "./../data/dataset.js";
 import { setRoutes, setRootElement, onURLChange } from './router.js';
 import { viewError } from './views/viewError.js';
@@ -7,7 +8,7 @@ import { viewDescriptionCard } from './views/viewDescriptionCard.js';
 const routes = {
   "/": home, //Home donde se ven todas las tarjetas
   "/error": viewError,
-  //"/api": viewAPIKey,
+  "/viewAPIKey": viewAPIKey,
   //"/chats": viewChats,
   // "/description": viewDescriptionCard   // /pelicula/${movie}--- "/pelicula/walli": viewDescriptionCard(walli) 
 }
