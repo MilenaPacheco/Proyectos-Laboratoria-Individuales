@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
 
 * {
   margin: 0;
@@ -339,4 +340,65 @@ header {
     flex-wrap: wrap;
     background-color: #FCAB10;
     color: #1F0441;
+}**/
+.div-card{
+    font-family: 'Roboto Mono';
+    height: 100vw;
+    background-color: #FCAB10;
+    display: grid;
+    width: 88vw;
+    border-radius: 12px;
+    margin: 4vw 4vw 30vw 4vw;
+    padding: 2vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 35% 65%;
+    padding-bottom: 6vw;
+}
+
+.film-image {
+    width: 34vw;
+    height: auto;
+}
+
+.list-description-short {
+    width: 44vw;
+    height: 20vw;
+    text-align: center;
+    padding: 4vw 2vw 10vw 2vw;
+    font-size: x-large
+}
+.list-description-all {
+    justify-content: left;
+    font-size: larger;
+}
+.description-card {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-size: larger;
+    text-align: justify;
+    margin: 1vw 4vw auto 4vw
+}
+
+.name-movie-description{
+    font-size: xx-large;
+    padding-bottom: 5vw;
+}
+
+.btn-regresar, .btn-chat{
+    font-family: "Modak", system-ui;
+    width: 16vw;
+    height: 4vw;
+    background-color: #F9CE07;
+    border-radius: 7px;
+    position: relative;
+    top: -22vw;
+    font-size: x-large;
+}
+.btn-regresar{
+    left: 11vw;
+}
+.btn-chat{
+    left: 58vw;
 }
