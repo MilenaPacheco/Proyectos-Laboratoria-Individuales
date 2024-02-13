@@ -1,3 +1,4 @@
+import { data } from "../data/dataset.js";
 import { navigateTo } from "./../router.js"
 // Aquí deben estar: 
 // - btnChatgrupal
@@ -37,7 +38,7 @@ export const headerComponent = () => {
 
   const btnChatgrupal = document.querySelector(".btn-chat-grupal");
   btnChatgrupal.addEventListener("click", () => {
-    navigateTo(`/viewsChats`);
+    navigateTo(`/chats`, data);
   });
   return header;
 };
