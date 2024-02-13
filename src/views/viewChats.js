@@ -6,6 +6,7 @@ import { footerComponent } from "./../components/footer.js";
 //import { navigateTo } from "./../router.js";
 
 export const viewChats = (cardActual) =>{
+  console.log(typeof cardActual, cardActual.length)
   const root = document.createElement("div");
 
   const header = headerComponent();
@@ -13,13 +14,26 @@ export const viewChats = (cardActual) =>{
 
   const contenedorChat = document.createElement("div")
   contenedorChat.className = "contenedor-chat"
-  root.appendChild(contenedorChat)
+  root.appendChild(contenedorChat);
 
-  const filmImage = document.createElement("img");
-  filmImage.className = "chat-image";
-  filmImage.src = cardActual.imageUrl;
-  filmImage.alt = `Imagen de la película ${cardActual.name}`;
-  contenedorChat.appendChild(filmImage);
+  if(!Array.isArray(cardActual)){
+    const filmImage = document.createElement("img");
+    filmImage.className = "chat-image";
+    filmImage.src = cardActual.imageUrl;
+    filmImage.alt = `Imagen de la película ${cardActual.name}`;
+    contenedorChat.appendChild(filmImage);
+  }else {
+    const divImageChatGrupal = document.createElement("div");
+    divImageChatGrupal.className="div-img-chat-grupal"
+    cardActual.forEach(film => {
+      const filmImage = document.createElement("img");
+      filmImage.className = "chat-image-circle";
+      filmImage.src = film.imageUrl;
+      filmImage.alt = `Imagen de la película ${film.name}`;
+      divImageChatGrupal.appendChild(filmImage);
+    });
+    contenedorChat.appendChild(divImageChatGrupal);
+  }
 
   const historialChat = document.createElement("div");
   historialChat.className="historial-chat";
