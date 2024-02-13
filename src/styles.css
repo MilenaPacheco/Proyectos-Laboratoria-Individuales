@@ -489,3 +489,20 @@ header {
     left: 40vw;
     top: -6vh;
 }
+.historial-chat {
+    height: 43vh;
+    width: 64vw;
+    background-color: #d9d9d9;
+    border-radius: 16px;
+    border: 1px solid black;
+}
+.div-img-chat-grupal > * {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 1px;
+}
+.div-img-chat-grupal > *:hover{
+    transform: scale(1.1); 
+}
+  
