@@ -8,7 +8,6 @@ import { navigateTo } from "./../router.js"
 export const headerComponent = () => {
   const header = document.createElement("header");
   header.innerHTML = `
-    <div class="title">
     <h1 class="btn-home"> MovieDev</h1>
     <div class="button-container">
         <button class="open-menu">
@@ -21,7 +20,6 @@ export const headerComponent = () => {
         <button class="btn-api">API Key</button>
         <button class="btn-chat-grupal">Chat Grupal</button>
         </div>
-    </div>
 `;
 
   document.body.appendChild(header);
