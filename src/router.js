@@ -7,7 +7,7 @@ let ROUTES = {
 };
 
 // referencia a nuestro elemento en html donde vamos a dibujar el contenido de nuestros componentes
-let rootElement = "";
+let rootElement = ""; //rootEl
 
 
 // se llaman set por que nos permiten setear un valor a nuestras variables
@@ -17,7 +17,7 @@ export const setRootElement = (newRootElementValue) => {
   // validar si newRootElementValue es un objeto html
   rootElement = newRootElementValue;
 }
-
+//la función principal es asignar el valor del parámetro routes a ROUTES pero además garantiza que las rutas sean estructuradas de una manera que maneje errores de manera centralizada en la aplicación
 export const setRoutes = (newRoutesValue) => {
   // optional Throw errors if routes isn't an object
   // optional Throw errors if routes doesn't define an /error route
@@ -39,7 +39,7 @@ const renderView = (pathname, props = {}) => {
   root.innerHTML = ""; //ERROR en consola - asegúrate de que rootElement sea un objeto del DOM antes de intentar manipular su contenido con innerHTML
   // find the correct view in ROUTES for the pathname - match entre ROUTES y el pathname
   if (ROUTES[pathname]) {
-    const template = ROUTES[pathname]();
+    const template = ROUTES[pathname](props);
     console.log(template);
     root.appendChild(template);
   } else {
