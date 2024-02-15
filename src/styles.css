@@ -5,10 +5,6 @@
   padding: 0;
 }
 
-header {
-  margin: 0;
-}
-
 .error-image {
   height: 160px;
   margin-top: 18px;
@@ -55,13 +51,12 @@ select {
   text-align: center;
 }
 
-.title {
+header {
   padding-top: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
   height: 65px;
   color: #1F0441;
   background-color: #FCAB10;
@@ -197,7 +192,6 @@ ul {
 footer {
   background-color: #FCAB10;
   color: #1F0441;
-  width: 100vw;
   text-align: center;
   padding: 5px;
   font-family: 'Titan One', sans-serif;
