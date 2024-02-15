@@ -406,8 +406,8 @@ header {
 
 /**Estilos viewAPI**/
 .btn-regresar-API{
-    top: 47vh;
-    left: -13vw;
+    bottom: 47vh;
+    left: 12vw;
 }
 
 .btn-confirmar{
@@ -459,7 +459,8 @@ header {
     position: relative;
     width: 39px;
     height: 20px;
-    left: 25vw;
+    left: 29vw;
+    top: -3vh;
 }
 .contenedor-chat {
     display: flex;
@@ -474,11 +475,11 @@ header {
 }
 .input-chat {
     height: 4vh;
-    width: 49vw;
+    width: 56vw;
     background-color: #d9d9d9;
     border-radius: 11px;
     margin-top: 1vh;
-    margin-left: -15vw;
+    margin-left: -8vw;
 }
 .chat-image{
     width: 32vw;
@@ -501,6 +502,9 @@ header {
     width: 100px;
     height: 100px;
     padding: 1px;
+    margin: -1vh 1vw 1vh 1vw;
+    
+    padding-top: 0vh;
 }
 .div-img-chat-grupal > *:hover{
     transform: scale(1.1); 
