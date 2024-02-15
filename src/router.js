@@ -7,7 +7,7 @@ let ROUTES = {
 };
 
 // referencia a nuestro elemento en html donde vamos a dibujar el contenido de nuestros componentes
-let rootElement = "";
+let rootElement = ""; //rootEl
 
 
 // se llaman set por que nos permiten setear un valor a nuestras variables
@@ -17,7 +17,7 @@ export const setRootElement = (newRootElementValue) => {
   // validar si newRootElementValue es un objeto html
   rootElement = newRootElementValue;
 }
-
+//la función principal es asignar el valor del parámetro routes a ROUTES pero además garantiza que las rutas sean estructuradas de una manera que maneje errores de manera centralizada en la aplicación
 export const setRoutes = (newRoutesValue) => {
   // optional Throw errors if routes isn't an object
   // optional Throw errors if routes doesn't define an /error route
@@ -52,19 +52,35 @@ const renderView = (pathname, props = {}) => {
 }
 
 // navigateTo actualiza el historial de nuestro navegador a partir de las URLs que vamos digitando con history.pushState
-export const navigateTo = (pathname, props = {}) => {
+/*export const navigateTo = (pathname, props = {}) => {
   // update window history with pushState
-  const urlVisited = window.location.hostname + pathname;
+  const currentPath = window.location.pathname;
+  const urlVisited = currentPath.endsWith(pathname) ? currentPath : currentPath + pathname;
   history.pushState("", "", urlVisited); // el primer parámetro era state
   // render the view with the pathname and props
   renderView(pathname, props);
-}
+}*/
+
+export const navigateTo = (pathname, props = {}) => {
+  // Create a new URL object using the current URL
+  const currentURL = new URL(window.location.href);
+  // Update the pathname of the new URL
+  currentURL.pathname = pathname;
+  // Update window history with pushState
+  history.pushState("", "", currentURL.href);
+  // Render the view with the pathname and props
+  renderView(pathname, props);
+};
+
 //navigateTo("/about");
 
 // es un método que tiene sentido sobre todo si la URL es compleja
-export const onURLChange = (pathname) => {
+export const onURLChange = () => {
   // parse the location for the pathname and search params
+  const pathname = window.location.pathname;
   // convert the search params to an object
   // render the view with the pathname and object
   renderView(pathname);
 } 
+
+window.addEventListener("popstate", onURLChange);
