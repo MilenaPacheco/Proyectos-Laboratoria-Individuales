@@ -52,12 +52,17 @@ function findSelects(select) {
   const selectedIndex = select.selectedIndex;
   const selectedValue = select.options[selectedIndex].value;
   const selectedText = select.options[selectedIndex].text;
-
   return { selectedValue, selectedText };
 }
 
 const selectGenre = document.querySelector("#genre");
-let selectedGenre = findSelects(selectGenre);
+selectGenre.addEventListener("change", () => {
+  selectGenre = findSelects(selectGenre);
+  currentMovies = [...filterGenre];
+  renderAndAppendToRoot(filterGenre);
+  resetCardDiv();
+  toggleMovieCards();
+});
 
 const selectAlfa = document.querySelector("#alfa");
 let selectedAlfa = findSelects(selectAlfa);
@@ -70,4 +75,32 @@ let selectedStatistics = findSelects(selectStatistics);
 
 const selectStatisticsCountry = document.querySelector("#statistics-country");
 let selectedStatisticsCountry = findSelects(selectStatisticsCountry);
+
+function toggleMovieCards () {
+  const movieCards = document.querySelector(".cards");
+  movieCards.classList.toggle("cards-menu");
+}
+
+function renderAndAppendToRoot(data) {
+  const rootElement = document.querySelector('#root');
+  if (rootElement) {
+    const renderedHTML = renderItems(data);
+    rootElement.innerHTML = renderedHTML;
+  }
+}
+
+function resetCardDiv () {
+  statisticsCountrySelect.selectedIndex = "";
+  if (cardDiv) {
+    cardDiv.style.display = 'none';
+    while (cardDiv.firstChild) { 
+      cardDiv.removeChild(cardDiv.firstChild);
+    }
+  }
+};
+
+renderAndAppendToRoot(data);
+
+
+
 

@@ -3,6 +3,7 @@ import { data } from "./../data/dataset.js";
 import { footerComponent } from "./../components/footer.js";
 import { navigateTo } from "../router.js";
 //import { sortData, filterData, computeStats, computeStatsScore } from "./../lib/dataFunctions.js";
+//import { selectsComponent } from "./../components/menuSelects.js";
 
 export const home = () => {
   const root = document.createElement("div");
