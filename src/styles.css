@@ -328,6 +328,32 @@ h4 {
     margin-bottom: 111px;
   }
 
+  .div-card{
+    font-family: 'Roboto Mono';
+    height: 100vw;
+    background-color: #FCAB10;
+    display: grid;
+    width: 88vw;
+    border-radius: 12px;
+    margin: 4vw 4vw 30vw 4vw;
+    padding: 2vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 35% 65%;
+    padding-bottom: 6vw;
+}
+
+.list-description-short {
+    width: 44vw;
+    height: 20vw;
+    text-align: center;
+    padding: 4vw 2vw 10vw 2vw;
+    font-size: x-large
+}
+.list-description-all {
+    justify-content: left;
+    font-size: larger;
+}
+
 }
 
 .div-card{
@@ -345,7 +371,13 @@ h4 {
 }
 
 .film-image {
-    width: 34vw;
+width: 34vw;
+height: auto;
+}
+
+
+.film-image {
+    width: 91%;
     height: auto;
 }
 
@@ -353,7 +385,7 @@ h4 {
     width: 44vw;
     height: 20vw;
     text-align: center;
-    padding: 4vw 2vw 10vw 2vw;
+    padding: 4vw 8vw 10vw 0vw;
     font-size: x-large
 }
 .list-description-all {
@@ -395,8 +427,8 @@ h4 {
 
 /**Estilos viewAPI**/
 .btn-regresar-API{
-    top: 47vh;
-    left: -13vw;
+    bottom: 47vh;
+    left: 12vw;
 }
 
 .btn-confirmar{
@@ -448,39 +480,40 @@ h4 {
     position: relative;
     width: 39px;
     height: 20px;
-    left: 25vw;
+    left: 29vw;
+    top: -3vh;
 }
 .contenedor-chat {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #fcab10;
-    width: 91vw;
+    max-width: 800px;
     height: 72vh;
     border-radius: 2vh;
-    margin: 5vh 5vw 8vh 5vw;
-    padding-top: 4vh;
+    margin: 5vh auto;
+    padding-top: 2vh;
 }
 .input-chat {
-    height: 4vh;
-    width: 49vw;
+    height: 7vh;
+    width: 90%;
     background-color: #d9d9d9;
     border-radius: 11px;
-    margin-top: 1vh;
-    margin-left: -15vw;
+    margin-top: 2vh;
 }
 .chat-image{
-    width: 32vw;
+    width: 32%;
     height: auto;
+    margin-bottom: 2vh;
 }
 .btn-salir-chat {
     width: 21vw;
     left: 40vw;
-    top: -6vh;
+    top: -2vh;
 }
 .historial-chat {
     height: 43vh;
-    width: 64vw;
+    width: 90%;
     background-color: #d9d9d9;
     border-radius: 16px;
     border: 1px solid black;
@@ -490,6 +523,10 @@ h4 {
     width: 100px;
     height: 100px;
     padding: 1px;
+    /**margin: -1vh 1vw 1vh 1vw;**/
+    margin:1vh;
+    
+    padding-top: 0vh;
 }
 .div-img-chat-grupal > *:hover{
     transform: scale(1.1); 
