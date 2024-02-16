@@ -49,7 +49,7 @@ export const viewChats = (cardActual) =>{
 
   const btnEnviar = document.createElement("button");
   btnEnviar.className="btn-icon-enviar";
-  contenedorChat.appendChild(btnEnviar);
+  input.appendChild(btnEnviar);
 
   const btnSalirChat = document.createElement("button");
   btnSalirChat.className = "btn btn-salir-chat";
