@@ -60,15 +60,15 @@ const renderView = (pathname, props = {}) => {
   // render the view with the pathname and props
   renderView(pathname, props);
 }*/
-
+// Función para navegar a una nueva ruta en la aplicación
 export const navigateTo = (pathname, props = {}) => {
-  // Create a new URL object using the current URL
+  // Create a new URL object using the current URL - Crear un nuevo objeto URL utilizando la URL actual del navegador
   const currentURL = new URL(window.location.href);
-  // Update the pathname of the new URL
+  // Update the pathname of the new URL - Actualizar la ruta (pathname) del nuevo objeto URL con la ruta proporcionada
   currentURL.pathname = pathname;
-  // Update window history with pushState
+  // Update window history with pushState - Actualizar el historial del navegador utilizando pushState
   history.pushState("", "", currentURL.href);
-  // Render the view with the pathname and props
+  // Render the view with the pathname and props - Renderizar la vista correspondiente a la nueva ruta con las propiedades proporcionadas
   renderView(pathname, props);
 };
 
