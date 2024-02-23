@@ -1,86 +1,105 @@
-// variables a ser encapsuladas
+let ROUTES = {}; // Esta variable almacena información sobre las rutas en la SPA.
+let rootElement; //Elemento DOM
 
-// objeto que mapea las rutas de nuestro sitio web
-let ROUTES = {
-  // "/": Home,    esto viene del index.js
-  // "/about": About
-};
-
-// referencia a nuestro elemento en html donde vamos a dibujar el contenido de nuestros componentes
-let rootElement = ""; //rootEl
-
-
-// se llaman set por que nos permiten setear un valor a nuestras variables
-// verifican que los valores sean correctos para que ROUTES y rootElement trabajen
-export const setRootElement = (newRootElementValue) => {
+export const setRootElement = (newRootelementValue) => {
   // assign rootEl
-  // validar si newRootElementValue es un objeto html
-  rootElement = newRootElementValue;
+  rootElement = newRootelementValue;
 }
-//la función principal es asignar el valor del parámetro routes a ROUTES pero además garantiza que las rutas sean estructuradas de una manera que maneje errores de manera centralizada en la aplicación
+
 export const setRoutes = (newRoutesValue) => {
   // optional Throw errors if routes isn't an object
   // optional Throw errors if routes doesn't define an /error route
+  if(typeof newRoutesValue !== "object" || newRoutesValue === null){
+    throw new Error("La ruta/routes no es un objeto o no está definida");
+  }
   // assign ROUTES
-  if (typeof newRoutesValue === "object") {
-    if (newRoutesValue["/error"]) {
-      ROUTES = newRoutesValue;
-    }
-  }
+  ROUTES = newRoutesValue;
 }
 
-// no se agregó queryStringToObject porque es opcional para este proyecto
-// en dataverse-chat nos enfocaremos en pathname, search es interesante pero no obligatorio
+const queryStringToObject = (queryString) => {
+  // convert query string to URLSearchParams
+  if(!queryString){
+    return {}
+  }
+  const params = new URLSearchParams(queryString);
+  console.log(Object.fromEntries(params));
+  return Object.fromEntries(params);
+  // convert URLSearchParams to an object
+  /*const newObj = {};
+  for(const [key, value] of params){
+    newObj[key]=value;
+  }
+  // return the object
+  return newObj;*/
+  console.log(params)
+}
 
-// esta es la constante que ve si pathname existe, si existe renderiza la vista, si no existe arroja el error.
-const renderView = (pathname, props = {}) => {
-  // clear the root element - vaciar todo nuestro elemento ROUTES, para que el contenido que se agregue no sea sumado a un contenido anterior
+const renderView = (pathname, props={}) => {
+  // clear the root element
   const root = rootElement;
-  root.innerHTML = ""; //ERROR en consola - asegúrate de que rootElement sea un objeto del DOM antes de intentar manipular su contenido con innerHTML
-  // find the correct view in ROUTES for the pathname - match entre ROUTES y el pathname
-  if (ROUTES[pathname]) {
-    const template = ROUTES[pathname](props);
-    console.log(template);
-    root.appendChild(template);
-  } else {
-    console.log(ROUTES["/error"]());
-    root.appendChild(ROUTES["/error"]());
+  root.innerHTML = "";
+  let template;
+  // find the correct view in ROUTES for the pathname
+  if(ROUTES[pathname]){
+    // render the correct view passing the value of props
+    template = ROUTES[pathname](props);
+    // in case not found render the error view
+  }else{
+    template = ROUTES["/error"](props);
   }
-  // in case not found render the error view - si no existe una ruta cargada al pathname lanzar error
-  // render the correct view passing the value of props
   // add the view element to the DOM root element
-}
-
-// navigateTo actualiza el historial de nuestro navegador a partir de las URLs que vamos digitando con history.pushState
-/*export const navigateTo = (pathname, props = {}) => {
-  // update window history with pushState
-  const currentPath = window.location.pathname;
-  const urlVisited = currentPath.endsWith(pathname) ? currentPath : currentPath + pathname;
-  history.pushState("", "", urlVisited); // el primer parámetro era state
-  // render the view with the pathname and props
-  renderView(pathname, props);
-}*/
-// Función para navegar a una nueva ruta en la aplicación
+  root.appendChild(template);
+} 
+//Actualiza la URL usando window.history.pushState y luego llama a renderView con el pathname y los props dados para mostrar la vista correspondiente.
 export const navigateTo = (pathname, props = {}) => {
-  // Create a new URL object using the current URL - Crear un nuevo objeto URL utilizando la URL actual del navegador
-  const currentURL = new URL(window.location.href);
-  // Update the pathname of the new URL - Actualizar la ruta (pathname) del nuevo objeto URL con la ruta proporcionada
-  currentURL.pathname = pathname;
-  // Update window history with pushState - Actualizar el historial del navegador utilizando pushState
-  history.pushState("", "", currentURL.href);
-  // Render the view with the pathname and props - Renderizar la vista correspondiente a la nueva ruta con las propiedades proporcionadas
+  console.log("Props actuales:", props);
+  
+  const searchParams = new URLSearchParams(window.location.search);
+  console.log("Nuevo objeto con parámetros: ",searchParams);
+
+  for (const [key, value] of Object.entries(props)) {
+    searchParams.set(key, value);
+    console.log("For objeto parámetros",searchParams);
+  }
+  //http://localhost:3000/description?name=short-circuit
+  const currentPathname = window.location.pathname;
+  console.log("Pathname actual: ",currentPathname);
+  const newQueryString = searchParams.toString();
+  console.log("Parámetros string: ",newQueryString);
+
+  let newURL;
+
+  /*if (newQueryString !== "") {
+    newURL = `${pathname}?${newQueryString}`;
+  } else {
+    newURL = pathname;
+  }*/
+
+  if (Object.keys(props).length === 0) {
+    newURL = pathname;
+  } else {
+    newURL = `${pathname}?${newQueryString}`;
+  }
+  
+  console.log("New URL:", newURL);
+  
+  window.history.pushState({pathname, props}, '', newURL);
+  //console.log("Navigated to:", pathname, props);
+  
   renderView(pathname, props);
 };
 
-//navigateTo("/about");
 
-// es un método que tiene sentido sobre todo si la URL es compleja
-export const onURLChange = () => {
+export const onURLChange = (location) => {
   // parse the location for the pathname and search params
-  const pathname = window.location.pathname;
+  location = window.location.pathname;
+  console.log(location);
+  const params = window.location.search;
+  console.log(params);
   // convert the search params to an object
+  const searchParams = queryStringToObject(params);
+  console.log(searchParams);
   // render the view with the pathname and object
-  renderView(pathname);
-} 
+  renderView(location, searchParams);
+}
 
-window.addEventListener("popstate", onURLChange);

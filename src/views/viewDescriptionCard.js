@@ -6,10 +6,10 @@ import { btnChat } from "../components/btnChat.js";
 import { navigateTo } from "./../router.js";
 //cardId es un parámetro que se envía desde el home en el escuchador de click de las tarjetitas, este corresponde al id de la tarjeta clickeada 
 export const viewDescriptionCard = (cardId) => {
-  console.log("card id: "+ cardId)
+  //console.log("card id: "+ cardId)
 
   //se extrae del array de objetos, data, el elemento que coincida se pasará a las fumciones de renderizado 
-  const cardActual = data.find((card) => card.id === cardId); 
+  const cardActual = data.find((card) => card.id === cardId.name); 
   console.log("card array: ", cardActual);
   const root = document.createElement("div");
 
@@ -42,10 +42,11 @@ export const viewDescriptionCard = (cardId) => {
   botonRegresar.addEventListener("click", () => {
     navigateTo(`/`)
   });
-  //const btnChatgrupal = document.querySelector(".btn-chat-grupal");
+  //botón de chat individual
   botonChat.addEventListener("click", () => {
     //const filmId = card 
-    navigateTo(`/chats`, cardActual);
+    //navigateTo(`/chats`,   cardActual);
+    navigateTo(`/chats`,   {name:cardActual.id});
   });
   //console.log(root)
   return root 

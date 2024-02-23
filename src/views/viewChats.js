@@ -1,5 +1,5 @@
 import { headerComponent } from "./../components/header.js";
-//import { data } from "./../data/dataset.js";
+import { data } from "./../data/dataset.js";
 import { footerComponent } from "./../components/footer.js";
 //import { btnRegresar } from "../components/btnRegresar.js";
 //import { btnChat } from "../components/btnChat.js";
@@ -7,6 +7,10 @@ import { footerComponent } from "./../components/footer.js";
 
 export const viewChats = (cardActual) =>{
   console.log(typeof cardActual, cardActual.length)
+  console.log(typeof cardActual.name, cardActual.name.length)
+  //condicional para ver si el argumento que se recibe, cardActual es {name:"chat-grupal"} o {name:cardActual.id}
+  const chatActual = data.find((card) => card.id === cardActual.name);   
+  //console.log(typeof chatActual, chatActual.length)
   const root = document.createElement("div");
 
   const header = headerComponent();
@@ -16,7 +20,26 @@ export const viewChats = (cardActual) =>{
   contenedorChat.className = "contenedor-chat"
   root.appendChild(contenedorChat);
 
-  if(!Array.isArray(cardActual)){
+  if(cardActual.name === "chat-grupal"){
+    const divImageChatGrupal = document.createElement("div");
+    divImageChatGrupal.className="div-img-chat-grupal"
+    data.forEach(film => {
+      const filmImage = document.createElement("img");
+      filmImage.className = "chat-image-circle";
+      filmImage.src = film.imageUrl;
+      filmImage.alt = `Imagen de la película ${film.name}`;
+      divImageChatGrupal.appendChild(filmImage);
+    });
+    contenedorChat.appendChild(divImageChatGrupal);
+  }else{
+    const filmImage = document.createElement("img");
+    filmImage.className = "chat-image";
+    filmImage.src = chatActual.imageUrl;
+    filmImage.alt = `Imagen de la película ${cardActual.name}`;
+    contenedorChat.appendChild(filmImage);
+  }
+
+  /*if(!Array.isArray(chatActual)){
     const filmImage = document.createElement("img");
     filmImage.className = "chat-image";
     filmImage.src = cardActual.imageUrl;
@@ -33,7 +56,7 @@ export const viewChats = (cardActual) =>{
       divImageChatGrupal.appendChild(filmImage);
     });
     contenedorChat.appendChild(divImageChatGrupal);
-  }
+  }*/
 
   const historialChat = document.createElement("div");
   historialChat.className="historial-chat";
@@ -49,7 +72,7 @@ export const viewChats = (cardActual) =>{
 
   const btnEnviar = document.createElement("button");
   btnEnviar.className="btn-icon-enviar";
-  input.appendChild(btnEnviar);
+  contenedorChat.appendChild(btnEnviar);
 
   const btnSalirChat = document.createElement("button");
   btnSalirChat.className = "btn btn-salir-chat";

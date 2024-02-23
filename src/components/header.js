@@ -36,7 +36,7 @@ export const headerComponent = () => {
 
   const btnChatgrupal = document.querySelector(".btn-chat-grupal");
   btnChatgrupal.addEventListener("click", () => {
-    navigateTo(`/chats`, data);
+    navigateTo(`/chats`, {name:"chat-grupal"});
   });
   return header;
 };

@@ -16,12 +16,21 @@ export const home = () => {
 
   const footer = footerComponent();
   root.appendChild(footer);
-
+  /** 
   const cards = root.querySelectorAll(".cards");
   cards.forEach((card) => {
     card.addEventListener("click", () => {
       const cardId = card.getAttribute("id");
       navigateTo(`/description/${card.id}`, cardId);
+    });
+  });
+  **/
+  const cards = root.querySelectorAll(".cards");
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const cardId = card.getAttribute("id");
+      //console.log(cardId)
+      navigateTo(`/description`, {name:cardId});
     });
   });
 
