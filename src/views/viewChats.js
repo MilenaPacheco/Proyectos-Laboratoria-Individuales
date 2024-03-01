@@ -71,6 +71,8 @@ export const viewChats = (cardActual) =>{
   contenedorChat.appendChild(input);
 
   const btnEnviar = document.createElement("button");
+  const icon = document.createElement('i');
+  btnEnviar.appendChild(icon);
   btnEnviar.className="btn-icon-enviar";
   contenedorChat.appendChild(btnEnviar);
 

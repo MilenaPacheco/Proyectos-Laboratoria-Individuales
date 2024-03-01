@@ -6,6 +6,9 @@
   margin: 0;
   padding: 0;
 }
+#root{
+  min-height: 100vh;
+}
 
 .error-image {
   height: 160px;
@@ -93,6 +96,7 @@ header {
 body {
   flex-grow: 1;
   background-color: #1F0441;
+
 }
 
 .cards {
@@ -360,6 +364,17 @@ h4 {
     font-size: larger;
 }
 
+.div-img-chat-grupal{
+  display: flex;
+  justify-content: center;
+  width: 73vh;
+  height: auto;
+  margin: 1vh 1vw;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
 }
 
 .div-card{
@@ -411,30 +426,48 @@ h4 {
 }
 
 /**Estilos viewAPI**/
-.btn-regresar-API{
-    bottom: 47vh;
-    left: 12vw;
+.container-input-btns {
+  position: relative;
+  width: 50vw;
+  height: 90vh;
+  margin: auto;
+  box-sizing: border-box;
 }
-
-.btn-confirmar{
-    top: 41vh;
-    left: 3vw;
-
+.btn-regresar-API {
+  position: absolute;
+  bottom: 45vh;
+  left: 19vw;
+  width: 108px;
+}
+.btn-confirmar {
+  position: absolute;
+  top: 35vh;
+  left: 19vw;
 }
 #api-key {
-    font-family: 'Modak';
-    font-size: x-large;
-    text-align: center;
-    position: relative;
-    border-radius: 13px;
-    color: #7c7a7a;
-    top: 27vh;
-    left: 30vw;
-    width: 39vw;
-    height: 4vh;
+  font-family: 'Modak';
+  font-size: x-large;
+  text-align: center;
+  position: absolute;
+  border-radius: 13px;
+  color: #7c7a7a;
+  top: 27vh;
+  left: 5vw;
+  width: 39vw;
+  height: 4vh;
 }
 
+
 /**Estilos viewBienvenida**/
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+  height: 84vh;
+  position: relative;
+  align-items: center;
+  margin: auto;
+}
 .bienvenida {
     position: relative;
     font-family: 'Modak';
@@ -445,18 +478,15 @@ h4 {
     top: 15vh;
 }
 .validacion {
-    margin-top: 14vh;
-    margin-bottom: 26vh;
     position: absolute;
     color: white;
     font-size: xx-large;
-    text-align: center;
     font-family: "Moulpali", sans-serif;
-    left: 32vw;
+    top: 21vh;
 }
-.ingreso .btn-regresar-bienvenida {
-    top: 28vh;
-    left: 42vw;
+.btn-regresar-bienvenida {
+  position: absolute;
+  top: 39vh;
 }
 
 /**Estilos viewChat**/
@@ -469,15 +499,14 @@ h4 {
     top: -3vh;
 }
 .contenedor-chat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fcab10;
-    max-width: 800px;
-    height: 72vh;
-    border-radius: 2vh;
-    margin: 5vh auto;
-    padding-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fcab10;
+  height: 72vh;
+  width: 73vw;
+  border-radius: 2vh;
+  margin: 5vh auto;
 }
 .input-chat {
     height: 7vh;
@@ -504,15 +533,22 @@ h4 {
     border: 1px solid black;
 }
 .div-img-chat-grupal > * {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    padding: 1px;
-    /**margin: -1vh 1vw 1vh 1vw;**/
-    margin:1vh;
-    
-    padding-top: 0vh;
+  border-radius: 50%;
+  width: 6vw;
+  height: 6vh;
+  padding: 1px;
+  margin: 0.5vh;
 }
 .div-img-chat-grupal > *:hover{
-    transform: scale(1.1); 
+  transform: scale(1.1); 
+}
+.div-img-chat-grupal{
+  display: flex;
+  justify-content: center;
+  width: 73vh;
+  height: auto;
+  margin: 1vh 1vw;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
