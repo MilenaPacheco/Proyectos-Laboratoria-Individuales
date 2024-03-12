@@ -2,6 +2,7 @@ import { headerComponent } from "./../components/header.js";
 import { footerComponent } from "./../components/footer.js";
 import { btnRegresar } from "../components/btnRegresar.js";
 import { navigateTo } from "./../router.js";
+import { communicateWithOpenAI } from "./../lib/openAIApi.js";
 
 export const viewBienvenida = () =>{
   const root = document.createElement("div");
@@ -34,6 +35,9 @@ export const viewBienvenida = () =>{
   botonRegresar.addEventListener("click", () => {
     navigateTo(`/`)
   })
+
+  const test = communicateWithOpenAI();
+  console.log("function openIA", test, typeof test);
 
   const footer = footerComponent();
   root.appendChild(footer);

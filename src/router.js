@@ -31,7 +31,7 @@ const queryStringToObject = (queryString) => {
   }
   // return the object
   return newObj;*/
-  console.log(params)
+  //console.log(params)
 }
 
 const renderView = (pathname, props={}) => {

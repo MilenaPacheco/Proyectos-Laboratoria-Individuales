@@ -1,6 +1,6 @@
 export const selectsComponent = () => {
   const selects = document.createElement("div");
-  selects.id = "inputs";
+  selects.className = "inputs";
   selects.innerHTML = `
             <label for="genre"><strong>Filtrar por género</strong></label>
             <select name="genre" id="genre" data-testid="select-filter">
@@ -44,63 +44,10 @@ export const selectsComponent = () => {
 
         `;
 
+
+
+  const selectFilter = document.querySelector("#genre");
+  console.log(selectFilter);
+
   return selects;
 };
-
-
-function findSelects(select) {
-  const selectedIndex = select.selectedIndex;
-  const selectedValue = select.options[selectedIndex].value;
-  const selectedText = select.options[selectedIndex].text;
-  return { selectedValue, selectedText };
-}
-
-const selectGenre = document.querySelector("#genre");
-selectGenre.addEventListener("change", () => {
-  selectGenre = findSelects(selectGenre);
-  currentMovies = [...filterGenre];
-  renderAndAppendToRoot(filterGenre);
-  resetCardDiv();
-  toggleMovieCards();
-});
-
-const selectAlfa = document.querySelector("#alfa");
-let selectedAlfa = findSelects(selectAlfa);
-
-const selectYear = document.querySelector("#year");
-let selectedYear = findSelects(selectYear);
-
-const selectStatistics = document.querySelector("#statistics");
-let selectedStatistics = findSelects(selectStatistics);
-
-const selectStatisticsCountry = document.querySelector("#statistics-country");
-let selectedStatisticsCountry = findSelects(selectStatisticsCountry);
-
-function toggleMovieCards () {
-  const movieCards = document.querySelector(".cards");
-  movieCards.classList.toggle("cards-menu");
-}
-
-function renderAndAppendToRoot(data) {
-  const rootElement = document.querySelector('#root');
-  if (rootElement) {
-    const renderedHTML = renderItems(data);
-    rootElement.innerHTML = renderedHTML;
-  }
-}
-
-function resetCardDiv () {
-  statisticsCountrySelect.selectedIndex = "";
-  if (cardDiv) {
-    cardDiv.style.display = 'none';
-    while (cardDiv.firstChild) { 
-      cardDiv.removeChild(cardDiv.firstChild);
-    }
-  }
-};
-
-renderAndAppendToRoot(data);
-
-
-
-

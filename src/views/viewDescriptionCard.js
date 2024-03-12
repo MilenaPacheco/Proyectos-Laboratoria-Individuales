@@ -16,9 +16,13 @@ export const viewDescriptionCard = (cardId) => {
   const viewHeader = headerComponent();
   root.appendChild(viewHeader);
 
+  const div = document.createElement("div");
+  div.className = "container-all-description";
+  root.appendChild(div);
+
   const divCard = document.createElement("div");
   divCard.className = "div-card";
-  root.appendChild(divCard)
+  div.appendChild(divCard)
 
   const imageFilm = createImg(cardActual);
   divCard.appendChild(imageFilm);
@@ -29,11 +33,16 @@ export const viewDescriptionCard = (cardId) => {
   const descriptionCardAll = descriptionCard2(cardActual);
   divCard.appendChild(descriptionCardAll);
 
+  const divBotones = document.createElement("div");
+  divBotones.className = "div-botones";
+  div.appendChild(divBotones);
+
   const botonRegresar = btnRegresar();
-  root.appendChild(botonRegresar)
+  divBotones.appendChild(botonRegresar)
+  botonRegresar.className = "btn btn-regresar";
 
   const botonChat = btnChat();
-  root.appendChild(botonChat);
+  divBotones.appendChild(botonChat);
 
   const footer = footerComponent();
   root.appendChild(footer);
@@ -42,11 +51,10 @@ export const viewDescriptionCard = (cardId) => {
   botonRegresar.addEventListener("click", () => {
     navigateTo(`/`)
   });
-  //botón de chat individual
+  //const btnChatgrupal = document.querySelector(".btn-chat-grupal");
   botonChat.addEventListener("click", () => {
     //const filmId = card 
-    //navigateTo(`/chats`,   cardActual);
-    navigateTo(`/chats`,   {name:cardActual.id});
+    navigateTo(`/chats`, {name:cardActual.id});
   });
   //console.log(root)
   return root 
@@ -61,6 +69,7 @@ function createImg(film){
   return filmImage;
 }
 
+//primera lista
 function descriptionCard(film){
   const descriptionCardHTML = document.createElement("ul");
   descriptionCardHTML.className = "list-description-short"
@@ -81,7 +90,7 @@ function descriptionCard2(film) {
   const descriptionCardHTML = document.createElement("div");
   descriptionCardHTML.className = "description-card";
 
-  // Primera lista
+  // segunda lista
   const list1 = document.createElement("ul");
   list1.className = "list-description-all";
   list1.innerHTML = `
@@ -97,7 +106,7 @@ function descriptionCard2(film) {
     </li>
   `;
 
-  // Segunda lista
+  // Descripción larga
   const list2 = document.createElement("p");
   list2.className = "list-description-all";
   list2.innerHTML = `

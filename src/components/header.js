@@ -1,6 +1,8 @@
-import { data } from "../data/dataset.js";
-import { navigateTo } from "./../router.js"
-// Aquí deben estar: 
+//import { data } from "../data/dataset.js";
+import { navigateTo } from "./../router.js";
+
+//import { renderItems } from "../views/home.js";
+// Aquí deben estar:
 // - btnChatgrupal
 // - btnAPIkey
 // - btnRegresar (nombre MovieDev en header, te devuelve al inicio)
@@ -17,8 +19,8 @@ export const headerComponent = () => {
                 <path d="M19,17h-6H5c-1.1,0-2,0.9-2,2s0.9,2,2,2h8h6c1.1,0,2-0.9,2-2S20.1,17,19,17z" fill="#1F0441"></path>
             </svg>
         </button>
-        <button class="btn-api">API Key</button>
-        <button class="btn-chat-grupal">Chat Grupal</button>
+        <button class="btn-api"><i class="fa-solid fa-key"></i></button>
+        <button class="btn-chat-grupal"><i class="fa-brands fa-rocketchat"></i></button>
         </div>
 `;
 
@@ -26,9 +28,22 @@ export const headerComponent = () => {
 
   const btnRegresar = document.querySelector(".btn-home");
   btnRegresar.addEventListener("click", () => {
-    navigateTo(`/`)
+    navigateTo(`/`);
   });
-  
+
+  //Escuchar click y cambiar display:none/flex
+  const elementClick = document.querySelector(".open-menu");
+  elementClick.addEventListener("click", function () {
+    const elementDiv = document.querySelector(".inputs");
+    if (elementDiv.style.display === "none") {
+      elementDiv.style.display = "flex";
+      //console.log(elementDiv)
+    } else {
+      elementDiv.style.display = "none";
+      //console.log(elementDiv)
+    }
+  });
+
   const btnAPIkey = document.querySelector(".btn-api");
   btnAPIkey.addEventListener("click", () => {
     navigateTo(`/viewAPIKey`);
@@ -36,7 +51,14 @@ export const headerComponent = () => {
 
   const btnChatgrupal = document.querySelector(".btn-chat-grupal");
   btnChatgrupal.addEventListener("click", () => {
-    navigateTo(`/chats`, {name:"chat-grupal"});
+    navigateTo(`/chats`, { name: "chat-grupal" });
   });
+
   return header;
 };
+
+/*
+function toggleMovieCards () {
+  const movieCards = document.querySelector(".cards");
+  movieCards.classList.toggle("cards-menu");
+}*/

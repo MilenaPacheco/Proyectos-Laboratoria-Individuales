@@ -2,8 +2,8 @@ import { headerComponent } from "./../components/header.js";
 import { data } from "./../data/dataset.js";
 import { footerComponent } from "./../components/footer.js";
 import { navigateTo } from "../router.js";
-//import { sortData, filterData, computeStats, computeStatsScore } from "./../lib/dataFunctions.js";
-//import { selectsComponent } from "./../components/menuSelects.js";
+import { filterData } from "./../lib/dataFunctions.js";
+import { selectsComponent } from "./../components/menuSelects.js";
 
 export const home = () => {
   const root = document.createElement("div");
@@ -11,32 +11,39 @@ export const home = () => {
   const viewHeader = headerComponent();
   root.appendChild(viewHeader);
 
+  const menuSelects = selectsComponent();
+  viewHeader.appendChild(menuSelects);
+
+  //const selectGenre = document.querySelector("#genre");
+  //console.log(findSelects(selectGenre))
+
+  const selectFilter = document.querySelector('#genre')
+  selectFilter.addEventListener('change', (e) => { 
+    console.log("Prueba evento; " + e.target.value)
+  });
+
+
+
+  //renderizado pendiente
   const viewCards = renderItems(data);
   root.appendChild(viewCards);
 
   const footer = footerComponent();
   root.appendChild(footer);
-  /** 
-  const cards = root.querySelectorAll(".cards");
-  cards.forEach((card) => {
-    card.addEventListener("click", () => {
-      const cardId = card.getAttribute("id");
-      navigateTo(`/description/${card.id}`, cardId);
-    });
-  });
-  **/
+
   const cards = root.querySelectorAll(".cards");
   cards.forEach((card) => {
     card.addEventListener("click", () => {
       const cardId = card.getAttribute("id");
       //console.log(cardId)
-      navigateTo(`/description`, {name:cardId});
+      navigateTo(`/description`, { name: cardId });
     });
   });
 
   return root;
 };
 
+//renderizado general
 export const renderItems = (data) => {
   let html = "";
 
@@ -57,3 +64,4 @@ export const renderItems = (data) => {
 
   return filmsList;
 };
+
