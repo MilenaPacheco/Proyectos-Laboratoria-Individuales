@@ -312,35 +312,34 @@ h4 {
 
 
 /**Estilos viewAPI**/
+.container-api-key{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
 .container-input-btns {
-  position: relative;
   width: 50vw;
   height: 90vh;
   margin: auto;
-  box-sizing: border-box;
 }
 .btn-regresar-API {
-  position: absolute;
-  bottom: 45vh;
-  left: 19vw;
   width: 108px;
 }
 .btn-confirmar {
-  position: absolute;
-  top: 35vh;
-  left: 19vw;
+  width: 112px;
 }
 #api-key {
   font-family: 'Modak';
   font-size: x-large;
   text-align: center;
-  position: absolute;
   border-radius: 13px;
   color: #7c7a7a;
-  top: 27vh;
-  left: 5vw;
   width: 39vw;
   height: 4vh;
+  min-width: 349px;
 }
 
 
@@ -711,5 +710,11 @@ p .parrafo-user{
   padding-top: 0.8rem;
   overflow-y: scroll;
   max-width: 900px;
+}
+.container-api-key{
+  height: 87vh;
+}
+.container-all-description{
+  height: 87vh;
 }
 }
