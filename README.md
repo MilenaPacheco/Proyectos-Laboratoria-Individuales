@@ -2,7 +2,7 @@
 
 [Visita nuestra página](https://proyectos-laboratoria-individuales.vercel.app/)
 
-![Imagen Principal de MovieDev](imagenPrincipalDesk)
+![Imagen Principal de MovieDev](/imagenPrincipalDesk.png)
 
 
 ## 1. Resumen del proyecto
@@ -171,21 +171,6 @@ MovieDev ofrece una solución integral para nuestras usuarias, permitiéndoles e
 
 ## 7. Historias de usuaria
 
-Una vez que entiendas las necesidades de tus usuarias, escribe las [Historias
-de Usuaria](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que la usuaria necesita hacer/ver. Las **Historias de Usuaria** deben
-ser el resultado de tu proceso de investigación o _research_ de tus usuarias.
-
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
-
-Usa tus historias de usuaria para planificar tus sprints dividiendo
-cada historia en tareas.
-
-En la medida de lo posible, termina una Historia de Usuaria antes de pasar
-a la siguiente (cumpliendo con la Definición de Terminado y los Criterios
-de Aceptación).
-
 #### Historia de Usuario 1:
 **Yo como desarrolladora web quiero** ver información más detallada y específica de cada uno de los films. **Para** saber más detalles interesantes y no quedarme con información básica.
 
@@ -203,6 +188,7 @@ de Aceptación).
 
 
 #### Historia de Usuario 2:
+**Yo como desarrolladora web quiero** Yo como desarrolladora web quiero entablar una conversación con cada uno de los films de MovieDev  **Para** preguntar y saber de primera mano más detalles, curiosidades y cosas interesantes que no se encuentran en su descripción.
 
 ##### Criterios de aceptación:
 Interacción en la Pantalla de Cada Película
@@ -236,6 +222,7 @@ Funcionamiento del Botón de Chat
 - La función de chat ha superado satisfactoriamente sus propias pruebas, demostrando su correcto funcionamiento y cumplimiento de los requisitos establecidos.
 
 #### Historia de Usuario 3:
+**Yo como desarrolladora web quiero** Yo como desarrolladora web quiero entablar una conversación con todos los films de MovieDev y sus personajes  **Para** entretenerme y conocer más sus diferencias, similitudes y rankings.
 
 ##### Criterios de aceptación:
 - Criterios de Aceptación:
@@ -253,6 +240,7 @@ Funcionamiento del Botón de Chat
 - Se debe implementar un alert para advertir a la usuaria en caso de que ingrese credenciales erróneas, proporcionando una indicación clara del error sin interrumpir la experiencia de navegación.
 
 #### Historia de Usuario 4:
+**Yo como desarrolladora web quiero** Yo como desarrolladora web quiero ingresar mis credenciales para chatear con los films de MovieDev de manera segura y sencilla **Para** no perder tiempo, no perderme en la página y hacerlo de la manera más automatizada.  
 
 ##### Criterios de aceptación:
 - Criterios de Aceptación:
@@ -276,7 +264,7 @@ Funcionamiento del Botón de Chat
 - Además, revisamos las proporciones de las secciones en el prototipo para garantizar una distribución equilibrada del contenido y una navegación fluida para las usuarias. Esto implicó ajustes en la disposición y el tamaño de los elementos para optimizar la legibilidad y la accesibilidad en todas las pantallas y dispositivos.
 - Una de las áreas de enfoque más importantes fue el diseño y la disposición de los chats. Tomando en cuenta los comentarios de las usuarias, realizamos cambios significativos en la forma y la presentación de los chats para mejorar la claridad y la facilidad de uso. Esto incluyó ajustes en la disposición de los mensajes, la tipografía utilizada y la incorporación de elementos visuales para mejorar la comprensión y la interacción.
 
-![Imagen Prototipo](PrototipoAltaFidelidad1)
-![Imagen Prototipo](PrototipoAltaFidelidad2)
-![Imagen Prototipo](PrototipoAltaFidelidad3)
-![Imagen Prototipo](PrototipoAltaFidelidad4)
+![Imagen Prototipo](/PrototipoAltaFidelidad1.png)
+![Imagen Prototipo](/PrototipoAltaFidelidad2.png)
+![Imagen Prototipo](/PrototipoAltaFidelidad3.png)
+![Imagen Prototipo](/PrototipoAltaFidelidad4.png)
