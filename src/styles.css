@@ -117,6 +117,7 @@ body {
 
 img {
   height: 17vw;
+  max-height: 15vw;
   margin-bottom: 15px;
   border-radius: 10px;
 }
@@ -571,7 +572,7 @@ p .parrafo-user{
   * {
     margin: 0;
     padding: 0;
-    /*font-size: .75em;*/
+    font-size: .75em;
   }
 
   header {

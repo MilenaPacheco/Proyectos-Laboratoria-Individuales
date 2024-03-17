@@ -1,6 +1,6 @@
 # MovieDev
 
-[Visita nuestra página](https://proyectos-laboratoria-individuales.vercel.app/)
+[Visita MovieDev](https://proyectos-laboratoria-individuales.vercel.app/)
 
 ![Imagen Principal de MovieDev](/imagenPrincipalDesk.png)
 
@@ -10,25 +10,24 @@
 ### MovieDev
 MovieDev es una plataforma web diseñada para las desarrolladoras web que buscan inspiración y entretenimiento relacionado con el mundo de la tecnología. La plataforma ofrece una colección de tarjetas que cubren 24 películas cuidadosamente seleccionadas de géneros como documental, thriller, ciencia ficción, drama y animación. Todas estas películas exploran diversos aspectos del fascinante mundo tecnológico.
 
-Características principales:
-Colección de películas: MovieDev presenta una selección de 24 películas relacionadas con la tecnología, asegurando una variedad de géneros para adaptarse a diferentes gustos.
-Información detallada: Cada tarjeta de película proporciona información detallada sobre la trama, el elenco y otros aspectos relevantes, ofreciendo a las usuarias una visión completa de cada película.
-Chat individual y grupal: Integración de un chat tanto individual como grupal, permitiendo a las usuarias interactuar con los protagonistas de cada película y discutir sobre temas relacionados.
-Datos y colaboración:
-La información recopilada en MovieDev se basa en un conjunto de datos generado con la colaboración de ChatGPT. Este enfoque único permite a las usuarias explorar y descubrir películas que se ajusten a sus intereses y preferencias dentro del ámbito tecnológico.
+#### Características principales: 
 
-Uso:
+**Colección de películas: ** MovieDev presenta una selección de 24 películas relacionadas con la tecnología, asegurando una variedad de géneros para adaptarse a diferentes gustos.
+**Información detallada: ** Cada tarjeta de película proporciona información detallada sobre la trama, el elenco y otros aspectos relevantes, ofreciendo a las usuarias una visión completa de cada película.
+**Chat individual y grupal: ** Integración de un chat tanto individual como grupal, permitiendo a las usuarias interactuar con los protagonistas de cada película y discutir sobre temas relacionados.
+**Datos y colaboración: ** La información recopilada en MovieDev se basa en un conjunto de datos generado con la colaboración de ChatGPT. Este enfoque único permite a las usuarias explorar y descubrir películas que se ajusten a sus intereses y preferencias dentro del ámbito tecnológico.
+
+**Uso: **
 Para comenzar a explorar las películas disponibles, navega a través de las tarjetas en la plataforma y haz clic en aquellas que llamen tu atención para obtener más detalles. Además, puedes interactuar con los protagonistas a través del chat individual y grupal, puededes preguntar por datos relevantes y hasta datos personales cada intengrante te responderá independientemente.
 
 ### Los objetivos generales de este proyecto son los siguientes
 
-* Desarrollar una [Single Page Application (SPA)](https://es.wikipedia.org/wiki/Single-page_application)
-* Aplicar los conceptos de responsividad en el desarrollo de las vistas
-* Implementar un router para la navegación entre las diferentes
-vistas de la aplicación
-* Integrar una API externa
-* Entender la asincronía en JavaScript
-* Crear una suite de pruebas unitarias que permitan testear código asíncrono
+* Desarrollar una [Single Page Application (SPA)](https://es.wikipedia.org/wiki/Single-page_application).
+* Aplicar los conceptos de responsividad en el desarrollo de las vistas.
+* Implementar un router para la navegación entre las diferentes vistas de la aplicación.
+* Integrar una API externa.
+* Entender la asincronía en JavaScript.
+* Crear una suite de pruebas unitarias que permitan testear código asíncrono.
 
 ## 2. Consideraciones generales
 
@@ -42,21 +41,22 @@ Responsive Design:
 
 La aplicación se adapta y es accesible en diferentes dispositivos y tamaños de pantalla.
 
-Single Page Application (SPA):
-Se implemento un sistema de enrutamiento que permite la navegación fluida dentro de la aplicación.
-Cargar dinámicamente cada vista de la aplicación mediante JavaScript.
-Asegurar que la URL se actualice adecuadamente según la vista cargada.
-Cargar la vista correspondiente a la URL actual al iniciar la aplicación.
+Single Page Application (SPA):  
+Se implemento un sistema de enrutamiento que permite la navegación fluida dentro de la aplicación.  
+Cargar dinámicamente cada vista de la aplicación mediante JavaScript.  
+Asegurar que la URL se actualice adecuadamente según la vista cargada.  
+Cargar la vista correspondiente a la URL actual al iniciar la aplicación.  
 
-### Funcionalidades de Dataverse:
-Visualizar la data disponible.
-Filtrar la data según diferentes criterios.
-Ordenar la data según diferentes atributos.
-Calcular estadísticas sobre la data.
-Detalles de Personajes/Entidades:
+### Funcionalidades de MovieDev:
+Visualizar la data disponible.  
+Filtrar la data según diferentes criterios.  
+Ordenar la data según diferentes atributos.  
+Calcular estadísticas sobre la data.  
 
-Al hacer clic en una tarjeta de personaje/entidad, redirigir a una vista propia con su propia URL que muestre información detallada sobre ese personaje/entidad en particular.
-Configuración de API Key:
+Detalles de Personajes/Entidades:  
+
+Al hacer clic en una tarjeta de personaje/entidad, redirigir a una vista propia con su propia URL que muestre información detallada sobre ese personaje/entidad en particular.  
+Configuración de API Key.  
 
 Permitir a la usuaria configurar la API Key necesaria para interactuar con la API de OpenAI.
 Interacción a través de Chat:
@@ -64,15 +64,14 @@ Interacción a través de Chat:
 Utilizando la API de OpenAI, permiten a la usuaria interactuar con un personaje de la película a través de un sistema de chat.
 Las respuestas del sistema de chat son informativas y personalizadas según las preguntas de las usuarias, gracias a la inteligencia artificial de OpenAI.
 
-Al implementar estas funcionalidades, MovieDev proporcionará una experiencia enriquecedora y completa para las usuarias interesadas en explorar y aprender sobre personajes y entidades relevantes en el ámbito de la tecnología.
+Funcionalidades Específicas del Proyecto  
 
-Funcionalidades Específicas del Proyecto
-Interacción Simultánea con Personajes/Entidades a través de Chat
+Interacción Simultánea con Personajes/Entidades a través de Chat.  
 La aplicación permite al usuario interactuar simultáneamente con todos los personajes/entidades a través de un chat. Aquí están los detalles clave de esta funcionalidad:
 
 URL de Acceso: Esta funcionalidad se encuentra disponible en la URL /panel.
 
-Interacción de la Usuaria:
+*Interacción de la Usuaria:*
 
 La usuaria puede ingresar sus preguntas o mensajes en un cuadro de texto designado y enviarlos utilizando un botón de envío.
 Personalización de Mensajes:
@@ -83,13 +82,18 @@ Visualización de Respuestas:
 Las respuestas de todos los personajes se muestran ordenadas según el tiempo de respuesta.
 Indicador de Respuesta:
 
-La aplicación indica visualmente cuando uno o varios personajes/entidades están generando una respuesta al mensaje enviado, proporcionando retroalimentación en tiempo real sobre el proceso de interacción.
-Manejo de Errores de API
-La aplicación informa a la usuaria sobre cualquier error que pueda surgir al interactuar con la API, incluyendo situaciones como alcanzar la cuota de tokens por minuto u otros errores relacionados con la API. Aquí se detallan las características de este manejo de errores:
+--La aplicación indica visualmente cuando uno o varios personajes/entidades están generando una respuesta al mensaje enviado, proporcionando retroalimentación en tiempo real sobre el proceso de interacción.  --  
 
-Descripción Clara de Errores:
+*Manejo de Errores de API*  
+
+La aplicación informa a la usuaria sobre cualquier error que pueda surgir al interactuar con la API, incluyendo situaciones como alcanzar la cuota de tokens por minuto u otros errores relacionados con la API.  
+
+*Aquí se detallan las características de este manejo de errores:*  
+
+*Descripción Clara de Errores:*  
 Se proporciona una descripción clara de la causa del problema cuando ocurre un error relacionado con la API.
-Posibles Soluciones:
+
+*Posibles Soluciones:*  
 Además de describir el problema, la aplicación ofrece posibles soluciones para resolver el error de manera efectiva y continuar con la interacción.
 
   
@@ -98,7 +102,7 @@ Además de describir el problema, la aplicación ofrece posibles soluciones para
 La lógica del proyecto esta implementada completamente en JavaScript
 (ES6), HTML y CSS.
 
-El _boilerplate o estructura_ del proyecto :
+El boilerplate o estructura de MovieDev:
 
 ```text
 ├── src
@@ -138,36 +142,31 @@ El _boilerplate o estructura_ del proyecto :
 
 ## 5. Definición del producto
 
-Proceso de Diseño
-Investigación Inicial
+*Investigación Inicial*  
 Comenzamos nuestro proceso investigando las necesidades y preferencias de nuestras usuarias objetivo escogiendo contenido y funcionalidades relevante para ellas, las desarrolladoras web. Pedimos feedback para adecuar de una manera estratégica la posición de los elementos, combinación de los colores y las proporciones de cada una de las secciones además de utilizar principios de diseños.
 
-Definición de Funcionalidades
+*Definición de Funcionalidades*  
 Con base en la retroalimentación de nuestras usuarias y nuestro objetivo de proporcionar un recurso educativo y entretenido, definimos las funcionalidades clave de MovieDev y con los parámetros establecidos inicialmente. Esto incluye la visualización de películas, la capacidad de filtrar y ordenar la data, así como interactuar con los personajes a través de un chat impulsado por la inteligencia artificial, especificamente vinculado con la API de Open AI.
 
-Diseño y Desarrollo
-Utilizando las mejores prácticas de diseño web y la metodología ágil, comenzamos a diseñar y desarrollar MovieDev. Creamos wireframes y prototipos para iterar y refinar nuestra interfaz de usuario. Luego, implementamos el diseño utilizando tecnologías como HTML, CSS y JavaScript con la ayuda de Figma, acontinuación mostramos el prototipo.
+*Diseño y Desarrollo*  
+Utilizando buenas prácticas de diseño web, comenzamos a diseñar y desarrollar MovieDev. Creamos wireframes y prototipos para iterar y refinar nuestra interfaz de usuario. Luego, implementamos el diseño utilizando tecnologías como HTML, CSS y JavaScript con la ayuda de Figma, acontinuación mostramos el prototipo.
 
-Resolución de Problemas
-Problemas Identificados
-Durante el desarrollo, nos enfrentamos a desafíos como el manejo de grandes conjuntos de datos y distribución de espacios estrategicos para visualizar esta información, la integración de la API de OpenAI para el chat de inteligencia artificial tanto para una API gratuita con restricciones y una paga. 
+*Resolución de Problemas*  
+*Problemas Identificados*  Durante el desarrollo, nos enfrentamos a desafíos como el manejo de gran conjunto de datos y distribución de espacios estrategicos para visualizar esta información, la integración de la API de OpenAI para el chat de inteligencia artificial tanto para una API gratuita con restricciones y una paga. 
 
 ## 6. Soluciones Implementadas
 
-Para abordar estos problemas, hemos implementado una serie de estrategias:
+Para abordar estos problemas, se implemento una serie de estrategias:
 
-Paginación de Datos: Dividimos los conjuntos de datos en páginas más pequeñas para mejorar la carga y la velocidad de respuesta de la aplicación............
+*Optimización del Código:* Realizamos ajustes y mejoras en el código para optimizar el rendimiento de la aplicación y reducir los tiempos de carga.
 
-Optimización del Código: Realizamos ajustes y mejoras en el código para optimizar el rendimiento de la aplicación y reducir los tiempos de carga.
+*Personalización del Chat con OpenAI:* Utilizamos la API de OpenAI para personalizar las respuestas del chat, proporcionando respuestas relevantes y atractivas a las preguntas de las usuarias.
 
-Personalización del Chat con OpenAI: Utilizamos la API de OpenAI para personalizar las respuestas del chat, proporcionando respuestas relevantes y atractivas a las preguntas de las usuarias.
-
-Integración de Opción de API Key Gratuita: Hemos añadido una nueva opción de manejo de API Key Gratuita, además de la opción de API paga. En el chat grupal, debido a las limitaciones de la API gratuita en términos de tokens y respuestas, se entabla una conversación con tres películas escogidas al azar. Esto garantiza que las usuarias puedan seguir interactuando de manera significativa, incluso con las restricciones de la API gratuita.
+*Integración de Opción de API Key Gratuita:* Hemos añadido una nueva opción de manejo de API Key Gratuita, además de la opción de API paga. En el chat grupal, debido a las limitaciones de la API gratuita en términos de tokens y respuestas, se entabla una conversación con tres películas escogidas al azar. Esto garantiza que las usuarias puedan seguir interactuando de manera significativa, incluso con las restricciones de la API gratuita.
 
 ### Resultados y Beneficios
-MovieDev ofrece una solución integral para nuestras usuarias, permitiéndoles explorar películas relacionadas con la tecnología, aprender sobre personajes relevantes y entablar conversaciones interactivas a través del chat. Creemos que nuestro producto resuelve el problema de encontrar contenido educativo y entretenido en un formato accesible y atractivo para las desarrolladoras web, y lo hace de manera económica al ofrecer opciones tanto gratuitas como de pago para la integración de la API Key.
+MovieDev ofrece una solución integral para nuestras usuarias, permitiéndoles explorar películas relacionadas con la tecnología, aprender sobre personajes relevantes y entablar conversaciones interactivas a través del chat. Creemos que el resultado resuelve el problema de encontrar contenido educativo y entretenido en un formato accesible, intuitivo y atractivo para las desarrolladoras web, y lo hace de manera económica al ofrecer opciones tanto gratuitas como de pago para la integración de la API Key.
 
-¡Esperamos que disfrutes de MovieDev y encuentres inspiración en las historias y personajes que presenta!.
 
 ## 7. Historias de usuaria
 
@@ -179,15 +178,17 @@ MovieDev ofrece una solución integral para nuestras usuarias, permitiéndoles e
 - Al hacer click en el botón, la página debe cambiar y mostrar información más amplia y detallada sobre la película seleccionada
 - La información ampliada debe incluir detalles interesantes sobre la película, que no se mostraron en la tarjeta de inicio
 - La navegación de regreso desde la vista detallada a la vista principal debe ser intuitiva y fácil de usar
-- La funcionalidad de visualización de información detallada debe poder verse de manera consistente en dispositivos móviles y de escritorio.
+- La funcionalidad de visualización de información detallada debe poder verse de manera consistente en dispositivos móviles y de escritorio.  
+
 ##### Definición de terminado:
 - Al darle click al botón, la información más detallada se despliega en una nueva vista con su propia URL
-- El código asociado con la implementación de la vista detallada debe estar libre de errores. Debe superar sus propios tests
+- El código asociado con la 12implementación de la vista detallada debe estar libre de errores. Debe superar sus propios tests
 - La interfaz de usuario para la vista detallada debe ser estéticamente agradable y coherente con el diseño general de la página web. Respeta las buenas prácticas de UX design
 - Debe ser responsive. Y realizar pruebas para garantizar que la funcionalidad de información detallada funcione correctamente en diversos navegadores y dispositivos.
 
 
-#### Historia de Usuario 2:
+#### Historia de Usuario 2:  
+
 **Yo como desarrolladora web quiero** Yo como desarrolladora web quiero entablar una conversación con cada uno de los films de MovieDev  **Para** preguntar y saber de primera mano más detalles, curiosidades y cosas interesantes que no se encuentran en su descripción.
 
 ##### Criterios de aceptación:
