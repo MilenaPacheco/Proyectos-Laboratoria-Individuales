@@ -95,7 +95,7 @@ header {
   border-radius: 0 0 10px 0;
   gap: 0.5rem;
   left: 0rem;
-  top: 6rem;
+  top: 15vh;
 }
 
 body {
@@ -113,6 +113,7 @@ body {
   text-align: center;
   font-size: 16px;
   font-family: 'Roboto Mono', monospace;
+  cursor: pointer;
 }
 
 img {
@@ -375,6 +376,9 @@ h4 {
   position: absolute;
   top: 39vh;
 }
+.btn-api, .btn-chat-grupal{
+  font-size: 1.5rem
+}
 
 /**Estilos viewChat**/
 .btn-icon-enviar {
@@ -613,12 +617,15 @@ p .parrafo-user{
     color: #1F0441;
     border-radius: 0 0 10px 0;
     gap: 0.3rem;
+    top: 10vh;
   }
 
   img {
-    height: 14vw;
+    height: 26vw;
     margin-bottom: 10px;
     border-radius: 7px;
+    min-width: 140px;
+    min-height: 140px;
   }
 
   .cards {
@@ -629,7 +636,7 @@ p .parrafo-user{
     box-sizing: border-box;
     background-color: #0CE3E8;
     text-align: center;
-    font-size: 12px;
+    font-size: 25px;
     font-family: 'Roboto Mono', monospace;
     flex-direction: column;
   }
@@ -697,7 +704,7 @@ p .parrafo-user{
     width: 20%;
     /* height: fit-content; */
     margin: 21em auto 0;
-    max-width: 113px;
+    min-width: 147px;
  }
  .chat-image {
   width: 90%;

@@ -1,11 +1,4 @@
-//import { data } from "../data/dataset.js";
 import { navigateTo } from "./../router.js";
-
-//import { renderItems } from "../views/home.js";
-// Aquí deben estar:
-// - btnChatgrupal
-// - btnAPIkey
-// - btnRegresar (nombre MovieDev en header, te devuelve al inicio)
 
 export const headerComponent = () => {
   const header = document.createElement("header");
@@ -19,8 +12,8 @@ export const headerComponent = () => {
                 <path d="M19,17h-6H5c-1.1,0-2,0.9-2,2s0.9,2,2,2h8h6c1.1,0,2-0.9,2-2S20.1,17,19,17z" fill="#1F0441"></path>
             </svg>
         </button>
-        <button class="btn-api"><i class="fa-solid fa-key"></i></button>
-        <button class="btn-chat-grupal"><i class="fa-brands fa-rocketchat"></i></button>
+        <button class="btn-api" title="Ingresar API"><i class="fa-solid fa-key"></i></button>
+        <button class="btn-chat-grupal" title="Chat grupal"><i class="fa-brands fa-rocketchat"></i></button>
         </div>
 `;
 
@@ -57,8 +50,3 @@ export const headerComponent = () => {
   return header;
 };
 
-/*
-function toggleMovieCards () {
-  const movieCards = document.querySelector(".cards");
-  movieCards.classList.toggle("cards-menu");
-}*/
