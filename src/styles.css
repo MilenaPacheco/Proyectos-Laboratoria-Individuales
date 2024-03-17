@@ -117,7 +117,8 @@ body {
 
 img {
   height: 17vw;
-  max-height: 15vw;
+  max-height: 250px;
+  max-width: 250px;
   margin-bottom: 15px;
   border-radius: 10px;
 }
