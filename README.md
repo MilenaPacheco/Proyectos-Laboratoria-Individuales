@@ -201,14 +201,6 @@ Funcionamiento del Botón de Chat
 - Si la Usuaria No Ingresó Previamente la API Key:
 - Al hacer clic en el botón de chat, se abrirá la vista para ingresar las credenciales de la API Key.
 - Después de ingresar las credenciales, la página automáticamente redirigirá a la usuaria al chat, donde podrá enviar preguntas o comentarios sin problemas.
-- Características del Chat Individual
-- La pantalla de chat individual está diseñada para adaptarse a diferentes tipos de dispositivos y navegadores, asegurando una experiencia óptima para todas las usuarias.
-- En el chat, se puede diferenciar claramente la interacción entre la usuaria y la película, garantizando una comunicación efectiva.
-- Se permite el uso de emoticones para enriquecer la comunicación.
-- Se incluye un botón de envío para mensajes, facilitando el proceso de comunicación.
-- El diseño del chat es agradable a la vista, con una interfaz intuitiva y atractiva.
-- Se proporciona una opción para salir del chat en caso de que la usuaria no desee continuar la conversación.
-- Se presenta una ventana para ver el despliegue del chat y otra para el input de la usuaria, asegurando una organización clara y eficiente durante la interacción.
 
 ##### Definición de terminado:
 - El botón para entrar al chat funciona sin errores y cumple con los criterios de diseño de Experiencia de Usuario (UX). Es legible, con un contraste adecuado y está ubicado de manera intuitiva para llamar a la acción.
@@ -218,12 +210,10 @@ Funcionamiento del Botón de Chat
 - La pantalla del chat individual es responsive, adaptándose correctamente a diferentes dispositivos y tamaños de pantalla.
 - El funcionamiento del chat y su legibilidad se han probado mediante pruebas de usabilidad, asegurando una experiencia fluida para la usuaria.
 - El ingreso de texto en los campos de entrada y la lectura del chat se realiza de manera cómoda y sin interrumpir la visualización de la página. El chat admite los caracteres típicos necesarios para una conversación fluida.
-- El botón de envío de mensajes funciona sin errores y cumple con los criterios de diseño de UX. Es legible, con suficiente contraste y su posición invita intuitivamente a la acción.
-- El estilo de la vista del chat es coherente con el resto de la página web, manteniendo una apariencia uniforme y profesional.
-- La función de chat ha superado satisfactoriamente sus propias pruebas, demostrando su correcto funcionamiento y cumplimiento de los requisitos establecidos.
+
 
 #### Historia de Usuario 3:
-**Yo como desarrolladora web quiero** Yo como desarrolladora web quiero entablar una conversación con todos los films de MovieDev y sus personajes  **Para** entretenerme y conocer más sus diferencias, similitudes y rankings.
+**Yo como desarrolladora web quiero** entablar una conversación con todos los films de MovieDev y sus personajes  **Para** entretenerme y conocer más sus diferencias, similitudes y rankings.
 
 ##### Criterios de aceptación:
 - Criterios de Aceptación:
@@ -241,7 +231,7 @@ Funcionamiento del Botón de Chat
 - Se debe implementar un alert para advertir a la usuaria en caso de que ingrese credenciales erróneas, proporcionando una indicación clara del error sin interrumpir la experiencia de navegación.
 
 #### Historia de Usuario 4:
-**Yo como desarrolladora web quiero** Yo como desarrolladora web quiero ingresar mis credenciales para chatear con los films de MovieDev de manera segura y sencilla **Para** no perder tiempo, no perderme en la página y hacerlo de la manera más automatizada.  
+**Yo como desarrolladora web quiero** ingresar mis credenciales para chatear con los films de MovieDev de manera segura y sencilla **Para** no perder tiempo, no perderme en la página y hacerlo de la manera más automatizada.  
 
 ##### Criterios de aceptación:
 - Criterios de Aceptación:
