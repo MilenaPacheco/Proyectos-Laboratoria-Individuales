@@ -33,7 +33,7 @@ export const communicateWithOpenAI = async (messages, film) => {
       return data;
     })
     .catch((error) => {
-      //console.error("Error:", error);
+      console.error("Error:", error);
       throw error; // Re-lanza el error para que pueda ser capturado externamente
     });
 };

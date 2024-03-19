@@ -115,6 +115,10 @@ export const viewChats = (cardActual) => {
         console.log(parrafo);
       } else {
         console.error("Respuesta inesperada:", response);
+        alert("Tu API es incorrecta, ingresa una válida");
+        alert(response.error.message)
+        //alert(`Error ${response.status}: ${response.statusText}`);
+        console.log(response.error.code)
       }
     }
 

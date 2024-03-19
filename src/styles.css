@@ -565,6 +565,10 @@ p .parrafo-user{
   background-color: silver; /* Color de fondo del "pulgar" */
   border-radius: 32px; /* Radio de borde del "pulgar" */
 }
+.chat-image-circle{
+  min-width: none;
+  min-height: none;
+}
 
 110px
 
@@ -624,8 +628,8 @@ p .parrafo-user{
     height: 26vw;
     margin-bottom: 10px;
     border-radius: 7px;
-    min-width: 140px;
-    min-height: 140px;
+    /*min-width: 140px;
+    min-height: 140px;*/
   }
 
   .cards {
@@ -725,5 +729,9 @@ p .parrafo-user{
 }
 .container-all-description{
   height: 87vh;
+}
+img .chat-image-circle{
+  min-width: 45px;
+  min-height: 45px;
 }
 }
